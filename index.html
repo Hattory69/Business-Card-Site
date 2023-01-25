@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/favicon.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Твой Frontender</title>
+</head>
+
+<body>
+  <header id="top" class="header">
+    <div class="container header__wrapper flex">
+      <div class="header__left">
+        <svg class="header__logo" width="312.465" height="76.742" viewBox="0 0 312.465 76.742"
+          xmlns="http://www.w3.org/2000/svg">
+          <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#ffffff"
+            stroke-width="0.25mm" fill="#ffffff" style="stroke:#ffffff;stroke-width:0.25mm;fill:#ffffff">
+            <path
+              d="M 136.79 75.64 L 125.711 75.64 L 105.54 2.913 L 117.081 2.913 L 131.25 59.234 L 131.925 59.234 L 146.662 2.913 L 158.097 2.913 L 172.834 59.27 L 173.509 59.27 L 187.642 2.913 L 199.219 2.913 L 179.013 75.64 L 167.969 75.64 L 152.664 21.166 L 152.096 21.166 L 136.79 75.64 Z M 249.965 47.799 L 249.965 51.564 L 206.606 51.564 L 206.606 43.609 L 239.56 43.609 A 17.561 17.561 0 0 0 239.093 39.48 A 14.332 14.332 0 0 0 237.856 36.169 Q 236.151 32.92 233.079 31.038 A 12.707 12.707 0 0 0 228.122 29.305 A 16.288 16.288 0 0 0 225.888 29.156 Q 221.414 29.156 218.093 31.34 Q 214.773 33.524 212.98 37.022 A 16.376 16.376 0 0 0 211.186 44.603 L 211.186 50.818 A 25.861 25.861 0 0 0 211.506 54.992 Q 211.896 57.377 212.763 59.359 A 15.302 15.302 0 0 0 213.122 60.122 A 14.27 14.27 0 0 0 216.144 64.201 A 13.186 13.186 0 0 0 218.537 65.963 A 14.898 14.898 0 0 0 223.876 67.774 A 19.284 19.284 0 0 0 226.669 67.97 Q 229.688 67.97 232.174 67.1 A 11.688 11.688 0 0 0 236.471 64.49 Q 238.282 62.75 239.24 60.193 L 249.29 62.004 Q 248.083 66.443 244.976 69.763 A 20.263 20.263 0 0 1 238.963 74.141 A 24.404 24.404 0 0 1 237.199 74.912 A 26.085 26.085 0 0 1 231.196 76.439 A 34.235 34.235 0 0 1 226.563 76.741 Q 218.502 76.741 212.696 73.279 Q 206.89 69.816 203.747 63.513 Q 200.604 57.21 200.604 48.723 A 37.929 37.929 0 0 1 201.365 40.955 A 29.464 29.464 0 0 1 203.747 33.95 A 24.857 24.857 0 0 1 209.26 26.487 A 23.437 23.437 0 0 1 212.554 23.971 A 23.061 23.061 0 0 1 222.138 20.609 A 29.41 29.41 0 0 1 225.817 20.385 Q 230.434 20.385 234.766 21.912 Q 239.098 23.439 242.543 26.706 Q 245.988 29.973 247.976 35.175 Q 249.693 39.666 249.928 45.811 A 52.097 52.097 0 0 1 249.965 47.799 Z M 40.022 75.64 L 28.552 75.64 L 60.299 12.856 L 60.299 12.324 L 23.58 12.324 L 23.58 2.913 L 71.662 2.913 L 71.662 12.643 L 40.022 75.64 Z M 273.012 75.64 L 262.642 75.64 L 262.642 2.913 L 273.26 2.913 L 273.26 29.937 L 273.9 29.937 A 20.58 20.58 0 0 1 274.707 28.584 Q 275.163 27.877 275.732 27.097 A 44.559 44.559 0 0 1 276.563 25.995 A 13.114 13.114 0 0 1 278.793 23.774 Q 279.872 22.919 281.213 22.171 A 21.683 21.683 0 0 1 281.392 22.071 A 12.377 12.377 0 0 1 284.353 20.948 Q 286.624 20.385 289.56 20.385 A 22.297 22.297 0 0 1 297.262 21.689 A 20.536 20.536 0 0 1 301.35 23.723 Q 306.535 27.061 309.5 33.346 A 29.59 29.59 0 0 1 311.769 40.508 Q 312.465 44.191 312.465 48.474 A 44.387 44.387 0 0 1 311.94 55.483 Q 311.221 59.976 309.517 63.62 A 25.369 25.369 0 0 1 305.893 69.346 A 21.038 21.038 0 0 1 301.421 73.314 A 20.679 20.679 0 0 1 290.588 76.689 A 25.15 25.15 0 0 1 289.667 76.706 A 24.278 24.278 0 0 1 286.329 76.49 Q 284.605 76.25 283.172 75.744 A 11.922 11.922 0 0 1 281.552 75.037 Q 278.41 73.368 276.634 71.13 A 41.122 41.122 0 0 1 275.417 69.522 Q 274.499 68.241 273.9 67.153 L 273.012 67.153 L 273.012 75.64 Z M 11.968 75.64 L 1.35 75.64 L 1.35 21.095 L 11.968 21.095 L 11.968 75.64 Z M 273.047 48.368 A 33.631 33.631 0 0 0 273.39 53.289 Q 273.804 56.084 274.716 58.453 A 17.495 17.495 0 0 0 276.609 62.097 A 13.707 13.707 0 0 0 279.546 65.218 Q 282.706 67.65 287.287 67.65 A 14.745 14.745 0 0 0 291.024 67.198 A 11.282 11.282 0 0 0 295.242 65.111 A 14.742 14.742 0 0 0 299.038 60.517 A 18.869 18.869 0 0 0 300.089 58.204 A 25.295 25.295 0 0 0 301.508 52.314 A 32.462 32.462 0 0 0 301.74 48.368 Q 301.74 42.97 300.125 38.673 A 16.705 16.705 0 0 0 298.053 34.75 A 13.817 13.817 0 0 0 295.295 31.89 A 11.719 11.719 0 0 0 290.062 29.635 A 16.03 16.03 0 0 0 287.287 29.405 A 14.864 14.864 0 0 0 283.523 29.86 A 11.501 11.501 0 0 0 279.493 31.784 Q 276.314 34.163 274.681 38.424 A 23.724 23.724 0 0 0 273.412 43.314 Q 273.07 45.534 273.049 48.033 A 39.089 39.089 0 0 0 273.047 48.368 Z M 6.712 12.679 Q 3.942 12.679 1.971 10.814 A 6.393 6.393 0 0 1 0.532 8.855 A 5.876 5.876 0 0 1 0 6.358 A 5.932 5.932 0 0 1 1.82 2.012 A 7.563 7.563 0 0 1 1.971 1.865 A 6.653 6.653 0 0 1 6.712 0.001 Q 9.482 0.001 11.453 1.865 A 6.325 6.325 0 0 1 12.931 3.921 A 5.998 5.998 0 0 1 13.424 6.358 A 5.889 5.889 0 0 1 11.604 10.668 A 7.663 7.663 0 0 1 11.453 10.814 A 6.653 6.653 0 0 1 6.712 12.679 Z" />
+          </g>
+        </svg>
+      </div>
+      <div class="header__right">
+        <a class="header__link gsap-fade" href="#hero">О себе</a>
+        <a class="header__link gsap-fade" href="#skills">Навыки</a>
+        <a class="header__link gsap-fade" href="#portfolio">Портфлоио</a>
+        <a class="header__link gsap-fade" href="">Контакты</a>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </header>
+  <main>
+    <div id="hero" class="hero block">
+      <div class="hero__wrapper container flex">
+        <div class="hero__left">
+          <div class="hero__top-left flex">
+            <p class="hero__hello gsap-fade">
+              Hello
+            </p>
+            <span class="hero__world gsap-fade">world</span>
+          </div>
+          <div class="hero__bottom-left gsap-fade">
+            <h1 class="hero__i-am ">Меня зовут Игорь</h1>
+            <p class="hero__about">
+              Обучаюсь web-разработке.
+            </p>
+            <p class="hero__about">
+              Мне 27 лет, в данный момент работаю в крупонй российской IT компании
+            </p>
+            <button class="hero__text-me">
+              Оставить заявку
+            </button>
+          </div>
+        </div>
+        <span id="i-am" class="hero__right">
+        </span>
+      </div>
+    </div>
+    <div id="skills" class="skills block">
+      <div class="skills__wrapper ">
+        <h2 class="skills__title title container">
+          Мои Навыки
+        </h2>
+        <div class="swiper-skills">
+          <ul class="skills__tree swiper-wrapper">
+            <li class="skills__block swiper-slide">
+              <span class="skills__figma skills__icon"></span>
+              <p class="skills__item">
+                Figma
+              </p>
+            </li>
+            <li class="skills__block swiper-slide">
+              <span class="skills__css skills__icon"></span>
+              <p class="skills__item">
+                CSS
+              </p>
+            </li>
+            <li class="skills__block swiper-slide">
+              <span class="skills__html skills__icon"></span>
+              <p class="skills__item">
+                HTML
+              </p>
+            </li>
+            <li class="skills__block swiper-slide">
+              <span class="skills__js skills__icon"></span>
+              <p class="skills__item">
+                Javascript
+              </p>
+            </li>
+            <li class="skills__block swiper-slide">
+              <span class="skills__mails skills__icon"></span>
+              <p class="skills__item">
+                Вёрстка писем
+              </p>
+            </li>
+            <li class="skills__block swiper-slide">
+              <span class="skills__git skills__icon"></span>
+              <p class="skills__item">
+                GitHub
+              </p>
+            </li>
+            <li class="skills__block swiper-slide">
+              <span class="skills__adapt skills__icon"></span>
+              <p class="skills__item">
+                Адаптивная вёрстка
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="portfolio" class="portfolio block">
+      <div class="portfolio__wrapper container">
+        <h2 class="title">
+          Мои работы
+        </h2>
+      </div>
+      <div class="swiper__wrapper">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper__slide-left w-wave">
+              </div>
+              <div class="swiper__slide-right">
+                <h2 class="prtfolio__project-title">
+                  W-Wave
+                </h2>
+                <ul class="portfolio__project-descr">
+                  <li class="portfolio__project-feature">Сайт полностью интерактивный</li>
+                  <li class="portfolio__project-feature">Плавные анимации при взаимодействии с элементами сайта</li>
+                  <li class="portfolio__project-feature">Адаптивный на любых разрешениях</li>
+                  <li class="portfolio__project-feature">Реализована отправка формы на почту</li>
+                </ul>
+              </div>
+              <a href="./projects/w-wave/index.html" target="_blank" class="portfolio__swiper-link"></a>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper__slide-left mangcoding">
+              </div>
+              <div class="swiper__slide-right">
+                <h2 class="prtfolio__project-title">
+                  Mangcoding Store
+                </h2>
+                <ul class="portfolio__project-descr">
+                  <li class="portfolio__project-feature">Сайт полностью интерактивный</li>
+                  <li class="portfolio__project-feature">Плавные анимации при взаимодействии с элементами сайта</li>
+                  <li class="portfolio__project-feature">Адаптивный на любых разрешениях</li>
+                </ul>
+              </div>
+              <a href="./projects/mangcoding/index.html" target="_blank" class="portfolio__swiper-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <a href="#top" class="to-top"></a>
+  </main>
+  <div id="text-me" class="modal__text-me">
+    <div class="modal__wrapper flex">
+      <div class="modal__top flex">
+        <label class="modal__lable" >
+          Форма для связи
+        </label>
+        <button class="modal__close-btn">
+        </button>
+      </div>
+      <form action="#" method="POST" class="modal__form flex modal__form-valid">
+        <div class="modal__text-wrapper">
+          <label class="form-label" for="message">
+            <textarea aria-label="Введите сообщение" id="message" name="message"
+              class="forms-input modal__massage" placeholder="Опишите идею проекта"
+              data-validate-field="text"></textarea>
+          </label>
+        </div>
+        <div class="modal__text-bottom flex">
+          <div class="modal__input-wrapper">
+            <label class="form-label" for="name">
+              <input aria-label="Ваше Имя" data-validate-field="name" id="name" type="text" name="username"
+                class="forms-input modal__bottom-inputs" placeholder="Как к вам обращаться?"></label>
+          </div>
+          <div class="modal__input-wrapper">
+            <label class="form-label" for="email">
+              <input aria-label="Ваш email" data-validate-field="email" id="email" type="email" name="email"
+                class="forms-input modal__bottom-inputs" placeholder="Email для связи"></label>
+          </div>
+        </div>
+        <div class="modal__buttons flex">
+          <button type="submit" class="button btn modal__send-form">Отправить</button>
+        </div>
+      </form>
+    </div>
+
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./js/just-validate.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
