@@ -1,12 +1,22 @@
-/* GSAP */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    }
+  });
+});
 
-let MyCardGsap = gsap.timeline({ defaults: { duration: 1, opacity: 1 } });
+const gsapProject = document.querySelectorAll(".fade");
+gsapProject.forEach((el) => observer.observe(el));
 
-MyCardGsap
-.to('.gsap-fade', { stagger: 0.25 })
-.to('.hero__bottom-left', {y: 0}, "<")
-.to('.hero__hello', {opacity: 1}, '<.5')
-.to('.hero__world', {opacity:1}, '<1')
+
+// let MyCardGsap = gsap.timeline({ defaults: { duration: 1, opacity: 1 } });
+
+// MyCardGsap
+// .to('.gsap-fade', { stagger: 0.25 })
+// .to('.hero__bottom-left', {y: 0}, "<")
+// .to('.hero__hello', {opacity: 1}, '<.5')
+// .to('.hero__world', {opacity:1}, '<1')
 
 /* Modal Text-me */
 
