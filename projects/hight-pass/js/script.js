@@ -38,7 +38,7 @@ function init() {
     {},
     {
       iconLayout: "default#image",
-      iconImageHref: "../img/map-object.svg",
+      iconImageHref: "./img/map-object.svg",
       iconImageSize: [12, 12],
       iconImageOffset: [-3, -42],
     }

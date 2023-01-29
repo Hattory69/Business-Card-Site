@@ -282,6 +282,7 @@ ul {
 }
 
 .hero__right {
+  position: relative;
   max-width: 100%;
   width: 300px;
   max-height: 100%;
@@ -516,7 +517,6 @@ ul {
 /* Skills */
 
 .skills {
-  /* background: linear-gradient(101.56deg, #2c2c2c 1.56%, #1c1c1c 95.55%); */
   overflow: hidden;
 }
 
@@ -626,130 +626,34 @@ ul {
   text-shadow: 0 0 1px var(--Gainsborough), 0 0 3px var(--Gainsborough);
 }
 
-/* Portfolio */
+/* portfolio */
 
-.swiper__wrapper {
+.project__list {
   position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
 }
-
-.swiper {
-  position: relative;
-  max-width: 700px;
-  border-radius: 15px;
-}
-
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  position: relative;
-  background: var(--BlackBlue);
-  border-radius: 15px;
-  padding: 10px 0;
-  transition: background 0.3s ease;
-}
-
-.swiper-slide:hover {
-  background: var(--DarkPurplishBlue);
-}
-
-.portfolio__swiper-link {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.swiper__slide-left {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  width: 100%;
-  max-height: 200px;
-  height: 200px;
-}
-
-.w-wave {
-  background-image: url("../projects/w-wave/img/adv__radio.png");
-}
-
-.mangcoding {
-  background-image: url("../projects/mangcoding/img/Logo.svg");
-}
-
-.swiper__slide-right {
-  padding-right: 10px;
-  width: 100%;
-}
-
-.prtfolio__project-title {
-  margin-bottom: 10px;
-}
-
-.portfolio__project-descr {
-  list-style: disc;
-}
-
-.portfolio__project-feature {
-  padding-bottom: 5px;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  width: 60px;
-  height: 60px;
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  content: "";
-  background-image: url("../img/swiper-arrow-def.svg");
-  height: 100%;
-  width: 100%;
-  transition: background-image 0.3s ease;
-}
-
-.swiper-button-next::after {
-  transform: rotate(180deg);
-}
-
-.swiper-button-prev:focus::after,
-.swiper-button-next:focus::after {
-  background-image: url("../img/swiper-arrow-foc.svg");
-}
-
-.swiper-button-prev:hover::after,
-.swiper-button-next:hover::after {
-  background-image: url("../img/swiper-arrow-hov.svg");
-}
-
-.swiper-button-prev:active::after,
-.swiper-button-next:active::after {
-  background-image: url("../img/swiper-arrow-act.svg");
-}
-
-/* portfolio 2.0 */
 
 .project {
+  transform: translateY(10%);
   height: 200px;
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 .project__img {
   position: absolute;
-  height: 0;
+  height: 100%;
   width: 100%;
-  transition: all .5s ease;
-  background-size: 0;
+  transform: translateY(-120%);
+  transition: transform 0.3s ease-out;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.project:hover .project__img {
-  height: 100%;
-  width: 100%;
+.project:hover .project__img,
+.project__img:focus {
+  transform: translateY(0);
 }
 
 .project__item-wrapper {
@@ -757,17 +661,24 @@ ul {
   position: relative;
 }
 
-.project__title {
-  font-size: 60px;
-  transition: all .5s ease;
+.mango-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.project:hover .project__title {
-  text-shadow: 0 0 1px var(--Granite), 
-    0 0 10px var(--Granite),
-    0 0 20px var(--Granite),
-    0 0 40px var(--Granite),
-    0 0 80px var(--Granite);
+.project__title {
+  font-size: 60px;
+  transition: text-shadow 0.5s ease;
+  text-shadow: 0 0 1px var(--Granite), 0 0 10px var(--Granite),
+    0 0 20px var(--Granite), 0 0 40px var(--Granite), 0 0 80px var(--Granite);
+}
+
+.project__logo {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
 }
 
 .project__about {
@@ -778,36 +689,120 @@ ul {
   color: var(--white);
   font-weight: 700;
   font-size: 20px;
-  transition: all .5s ease;
+  transition: text-shadow 0.5s ease;
+  text-shadow: 0 0 1px var(--Black), 0 0 10px var(--Black),
+    0 0 20px var(--Black), 0 0 40px var(--Black), 0 0 80px var(--Black);
 }
 
 .project__benif:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.project:hover .project__benif {
-  text-shadow: 0 0 1px var(--Black), 
-    0 0 10px var(--Black),
-    0 0 20px var(--Black),
-    0 0 40px var(--Black),
-    0 0 80px var(--Black);
-
-}
-
 .w-wave {
-  background-position: right;
   background-image: url("../img/w-wave.jpg");
-  background-size: cover;
 }
 
-.mango-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.mangcoding { 
-  background-position: left;
+.mangcoding {
   background-image: url("../img/mango.jpg");
-  background-color: #f4f4f4;
 }
+
+.highPass {
+  background-image: url("../img/highPass.jpg");
+}
+
+/* footer */
+
+.contacts {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  position: relative;
+}
+
+.contacts__wrapper {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+
+.contacts::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/bottom-spacer.svg");
+  width: 100%;
+  height: 100%;
+}
+
+.contacts__logo {
+  background-image: url("../img/Logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 200px;
+  height: 100px;
+}
+
+.contacts__social {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 20px;
+  gap: 20px;
+}
+
+.contacts__link {
+  transition: text-shadow .3s ease;
+  display: flex;
+}
+
+.contacts__link:hover,
+.contacts__link:focus {
+  text-shadow: 0 0 1px var(--Gainsborough), 0 0 3px var(--Gainsborough);
+}
+
+.contacts__icon {
+  transition: background-image 0.3s ease;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.tl-icon {
+  background-image: url("../img/telegram-icon.svg");
+}
+
+.contacts__link:hover .tl-icon,
+.contacts__link:focus .tl-icon {
+  background-image: url("../img/telegram-icon-hov.svg");
+}
+
+.inst-icon {
+  background-image: url("../img/inst-icon.svg");
+}
+
+.contacts__link:hover .inst-icon,
+.contacts__link:focus .inst-icon {
+  background-image: url("../img/inst-icon-hov.svg");
+}
+
+.vk-icon {
+  background-image: url("../img/vk-icon.svg");
+}
+
+.contacts__link:hover .vk-icon,
+.contacts__link:focus .vk-icon {
+  background-image: url("../img/vk-icon-hov.svg");
+}
+
+.mail-icon {
+  background-image: url("../img/mail-icon.svg");
+}
+
+.contacts__link:hover .mail-icon,
+.contacts__link:focus .mail-icon {
+  background-image: url("../img/mail-icon-hov.svg");
+}
+

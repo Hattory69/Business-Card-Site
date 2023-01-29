@@ -9,15 +9,6 @@ const observer = new IntersectionObserver((entries) => {
 const gsapProject = document.querySelectorAll(".fade");
 gsapProject.forEach((el) => observer.observe(el));
 
-
-// let MyCardGsap = gsap.timeline({ defaults: { duration: 1, opacity: 1 } });
-
-// MyCardGsap
-// .to('.gsap-fade', { stagger: 0.25 })
-// .to('.hero__bottom-left', {y: 0}, "<")
-// .to('.hero__hello', {opacity: 1}, '<.5')
-// .to('.hero__world', {opacity:1}, '<1')
-
 /* Modal Text-me */
 
 const textMeBtn = document.querySelector(".hero__text-me");
@@ -108,16 +99,8 @@ const swiper_skills = new Swiper('.swiper-skills', {
 });
 
 
+const resizeBtn = document.querySelector('.adapt');
 
-/* Swiper-portfolio */
+resizeBtn.addEventListener('click', function() {
 
-const swiper = new Swiper(".swiper", {
-  direction: "horizontal",
-  loop: true,
-  spaceBetween: 20,
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+})
