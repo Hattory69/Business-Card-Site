@@ -15,22 +15,13 @@ const textMeBtn = document.querySelector(".hero__text-me");
 const modalTextMe = document.querySelector(".modal__text-me");
 const modalCrosBtn = document.querySelector(".modal__close-btn");
 const modalForm = document.querySelector(".modal__massage");
-const myPhoto = document.querySelector(".hero__right");
-const I_AM_TYPING = "url('../img/hero__i-am-typing.png')";
-
-
-modalForm.addEventListener('focus', function() {
-document.getElementById("i-am").style.backgroundImage = I_AM_TYPING;
-})
 
 textMeBtn.addEventListener("click", function () {
   modalTextMe.classList.toggle("modal__text-me--active");
-  myPhoto.style = '';
 });
 
 modalCrosBtn.addEventListener("click", function () {
   modalTextMe.classList.remove("modal__text-me--active");
-  myPhoto.style = '';
 });
 
 /* Modal validation */
@@ -88,7 +79,7 @@ window.addEventListener("scroll", function () {
 
 /* Swiper-skills */
 
-const swiper_skills = new Swiper('.swiper-skills', {
+const swiper_skills = new Swiper(".swiper-skills", {
   direction: "horizontal",
   loop: true,
   spaceBetween: 10,
@@ -98,9 +89,26 @@ const swiper_skills = new Swiper('.swiper-skills', {
   },
 });
 
+document.addEventListener("mousemove", (e) => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
 
-const resizeBtn = document.querySelector('.adapt');
+  const anchor = document.getElementById("anchor");
+  const rekt = anchor.getBoundingClientRect();
+  const anchorX = rekt.left + rekt.width / 2;
+  const anchorY = rekt.top + rekt.height / 2;
 
-resizeBtn.addEventListener('click', function() {
+  const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
 
-})
+  const eyes = document.querySelectorAll(".eye");
+  eyes.forEach((eye) => {
+    eye.style.transform = `rotate(${90 + angleDeg}deg)`;
+  });
+});
+function angle(cx, cy, ex, ey) {
+  const dy = ey - cy;
+  const dx = ex - cx;
+  const rad = Math.atan2(dy, dx);
+  const deg = (rad * 180) / Math.PI;
+  return deg;
+}
