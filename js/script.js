@@ -9,24 +9,7 @@ const observer = new IntersectionObserver((entries) => {
 const gsapProject = document.querySelectorAll(".fade");
 gsapProject.forEach((el) => observer.observe(el));
 
-/* Modal Text-me */
-
-const textMeBtn = document.querySelector(".hero__text-me");
-const modalTextMe = document.querySelector(".modal__text-me");
-const modalCrosBtn = document.querySelector(".modal__close-btn");
-const modalForm = document.querySelector(".modal__massage");
-
-textMeBtn.addEventListener("click", function () {
-  modalTextMe.classList.toggle("modal__text-me--active");
-});
-
-modalCrosBtn.addEventListener("click", function () {
-  modalTextMe.classList.remove("modal__text-me--active");
-});
-
-/* Modal validation */
-
-new window.JustValidate(".modal__form-valid", {
+new window.JustValidate(".contacts__form-valid", {
   rules: {
     text: {
       required: true,
@@ -65,30 +48,6 @@ new window.JustValidate(".modal__form-valid", {
   },
 });
 
-/* scroll to top */
-
-const toTopBtn = document.querySelector(".to-top");
-
-window.addEventListener("scroll", function () {
-  if (window.pageYOffset > 100) {
-    toTopBtn.classList.add("active");
-  } else {
-    toTopBtn.classList.remove("active");
-  }
-});
-
-/* Swiper-skills */
-
-const swiper_skills = new Swiper(".swiper-skills", {
-  direction: "horizontal",
-  loop: true,
-  spaceBetween: 10,
-  slidesPerView: 7,
-  autoplay: {
-    speed: 5000,
-  },
-});
-
 document.addEventListener("mousemove", (e) => {
   const mouseX = e.clientX;
   const mouseY = e.clientY;
@@ -105,6 +64,7 @@ document.addEventListener("mousemove", (e) => {
     eye.style.transform = `rotate(${90 + angleDeg}deg)`;
   });
 });
+
 function angle(cx, cy, ex, ey) {
   const dy = ey - cy;
   const dx = ex - cx;
@@ -112,3 +72,45 @@ function angle(cx, cy, ex, ey) {
   const deg = (rad * 180) / Math.PI;
   return deg;
 }
+
+const showHero = document.querySelector('.hero-js');
+const heroNod = document.querySelector('.hero');
+
+showHero.addEventListener('click', function() {
+  heroNod.classList.add('active');
+  skillsNod.classList.remove('active');
+  portfolioNod.classList.remove('active');
+  contactsNod.classList.remove('active');
+});
+
+const showSkills = document.querySelector('.skills-js');
+const skillsNod = document.querySelector('.skills');
+
+showSkills.addEventListener('click', function() {
+  skillsNod.classList.add('active');
+  heroNod.classList.remove('active');
+  portfolioNod.classList.remove('active');
+  contactsNod.classList.remove('active');
+});
+
+const showPortfolio = document.querySelector('.portfolio-js');
+const portfolioNod = document.querySelector('.portfolio');
+
+showPortfolio.addEventListener('click', function() {
+  portfolioNod.classList.add('active');
+  skillsNod.classList.remove('active');
+  heroNod.classList.remove('active');
+  contactsNod.classList.remove('active');
+});
+
+const showContacts = document.querySelector('.contacts-js');
+const contactsNod = document.querySelector('.contacts');
+
+showContacts.addEventListener('click', function() {
+  contactsNod.classList.add('active');
+  skillsNod.classList.remove('active');
+  heroNod.classList.remove('active');
+  portfolioNod.classList.remove('active');
+});
+
+

@@ -15,21 +15,21 @@
 
 <body>
   <header id="top" class="header">
-    <div1 class="container header__wrapper flex">
+    <div class="container header__wrapper flex">
       <span class="header__logo">
       </span>
       <div class="header__right">
-        <a class="header__link fade" href="#hero">О себе</a>
-        <a class="header__link fade" href="#skills">Навыки</a>
-        <a class="header__link fade" href="#portfolio">Портфлоио</a>
-        <a class="header__link fade" href="#contacts">Контакты</a>
+        <a class="header__link hero-js fade">О себе</a>
+        <a class="header__link skills-js fade">Навыки</a>
+        <a class="header__link portfolio-js fade">Портфлоио</a>
+        <a class="header__link contacts-js fade">Контакты</a>
       </div>
-    </div1>
-    <div class="spacer"></div>
+    </div>
   </header>
   <main>
-    <div id="hero" class="hero block">
-      <div class="hero__wrapper container flex">
+    <section class="hero fade flex">
+      <span class="spacer top-spacer fade"></span>
+      <div class="hero__wrapper container fade flex">
         <div class="hero__left">
           <div class="hero__top-left flex">
             <p class="hero__hello fade">
@@ -45,9 +45,6 @@
             <p class="hero__about">
               Мне 27 лет, в данный момент работаю в крупонй российской IT компании
             </p>
-            <button class="hero__text-me">
-              Оставить заявку
-            </button>
           </div>
         </div>
         <div id="anchor" class="hero__right">
@@ -57,79 +54,147 @@
           <div class="hero__eye right-eye eye">
           </div>
           <p class="hero__bio bio-left">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis recusandae necessitatibus ducimus nihil commodi culpa, a sit corporis tempore, maiores voluptate officia assumenda perferendis quam. Quam iusto vitae exercitationem hic.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis recusandae necessitatibus ducimus nihil
+            commodi culpa, a sit corporis tempore, maiores voluptate officia assumenda perferendis quam. Quam iusto
+            vitae exercitationem hic.
           </p>
           <p class="hero__bio bio-right">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus totam assumenda animi repudiandae? Officiis facere modi, fuga sit repellendus esse.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus totam assumenda animi repudiandae?
+            Officiis facere modi, fuga sit repellendus esse.
           </p>
         </div>
       </div>
-    </div>
-    <div id="skills" class="skills block">
-      
-  </div>
-
-    <!-- <div id="skills" class="skills block">
-      <div class="skills__wrapper ">
+    </section>
+    <section class="skills fade">
+      <div class="skills__wrapper">
         <h2 class="skills__title title container">
           Мои Навыки
         </h2>
-        <div class="swiper-skills">
-          <ul class="skills__tree swiper-wrapper">
-            <li class="skills__block swiper-slide">
-              <span class="skills__figma skills__icon"></span>
-              <p class="skills__item">
-                Figma
-              </p>
-            </li>
-            <li class="skills__block swiper-slide">
-              <span class="skills__css skills__icon"></span>
-              <p class="skills__item">
-                CSS
-              </p>
-            </li>
-            <li class="skills__block swiper-slide">
-              <span class="skills__html skills__icon"></span>
-              <p class="skills__item">
-                HTML
-              </p>
-            </li>
-            <li class="skills__block swiper-slide">
-              <span class="skills__js skills__icon"></span>
-              <p class="skills__item">
-                Javascript
-              </p>
-            </li>
-            <li class="skills__block swiper-slide">
-              <span class="skills__mails skills__icon"></span>
-              <p class="skills__item">
-                Вёрстка писем
-              </p>
-            </li>
-            <li class="skills__block swiper-slide">
-              <span class="skills__git skills__icon"></span>
-              <p class="skills__item">
-                GitHub
-              </p>
-            </li>
-            <li class="skills__block swiper-slide">
-              <span class="skills__adapt skills__icon"></span>
-              <p class="skills__item">
-                Адаптивная вёрстка
-              </p>
-              <button class="adapt">click</button>
-            </li>
-            <li class="skills__block swiper-slide">
-              <span class="skills__SCSS skills__icon"></span>
-              <p class="skills__item">
-                SCSS
-              </p>
-            </li>
-          </ul>
-        </div>
+        <ul class="skills__tree">
+          <li tabindex="1" class="skills__block fade skills__one">
+            <div class="skills__inner-wrapper">
+              <div class="skills__left">
+                <span class="skills__figma skills__icon"></span>
+                <p class="skills__item">
+                  Figma
+                </p>
+              </div>
+              <ul class="skills__about">
+                <li class="skills__about-skill">Lorem ipsum dolor sit.</li>
+                <li class="skills__about-skill">Lorem, ipsum dolor.</li>
+                <li class="skills__about-skill">Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+          </li>
+          <li tabindex="1" class="skills__block fade skills__two">
+            <div class="skills__inner-wrapper">
+              <div class="skills__left">
+                <span class="skills__css skills__icon"></span>
+                <p class="skills__item">
+                  CSS
+                </p>
+              </div>
+              <ul class="skills__about">
+                <li class="skills__about-skill">Lorem ipsum dolor sit.</li>
+                <li class="skills__about-skill">Lorem, ipsum dolor.</li>
+                <li class="skills__about-skill">Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+          </li>
+          <li tabindex="1" class="skills__block fade skills__three">
+            <div class="skills__inner-wrapper">
+              <div class="skills__left">
+                <span class="skills__html skills__icon"></span>
+                <p class="skills__item">
+                  HTML
+                </p>
+              </div>
+              <ul class="skills__about">
+                <li class="skills__about-skill">Lorem ipsum dolor sit.</li>
+                <li class="skills__about-skill">Lorem, ipsum dolor.</li>
+                <li class="skills__about-skill">Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+          </li>
+          <li tabindex="1" class="skills__block fade skills__four">
+            <div class="skills__inner-wrapper">
+              <div class="skills__left">
+                <span class="skills__js skills__icon"></span>
+                <p class="skills__item">
+                  Javascript
+                </p>
+              </div>
+              <ul class="skills__about">
+                <li class="skills__about-skill">Lorem ipsum dolor sit.</li>
+                <li class="skills__about-skill">Lorem, ipsum dolor.</li>
+                <li class="skills__about-skill">Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+          </li>
+          <li tabindex="1" class="skills__block fade skills__five">
+            <div class="skills__inner-wrapper">
+              <div class="skills__left">
+                <span class="skills__mails skills__icon"></span>
+                <p class="skills__item">
+                  Вёрстка писем
+                </p>
+              </div>
+              <ul class="skills__about">
+                <li class="skills__about-skill">Lorem ipsum dolor sit.</li>
+                <li class="skills__about-skill">Lorem, ipsum dolor.</li>
+                <li class="skills__about-skill">Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+          </li>
+          <li tabindex="1" class="skills__block fade skills__six">
+            <div class="skills__inner-wrapper">
+              <div class="skills__left">
+                <span class="skills__git skills__icon"></span>
+                <p class="skills__item">
+                  GitHub
+                </p>
+              </div>
+              <ul class="skills__about">
+                <li class="skills__about-skill">Lorem ipsum dolor sit.</li>
+                <li class="skills__about-skill">Lorem, ipsum dolor.</li>
+                <li class="skills__about-skill">Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+          </li>
+          <li tabindex="1" class="skills__block fade skills__seven">
+            <div class="skills__inner-wrapper">
+              <div class="skills__left">
+                <span class="skills__adapt skills__icon"></span>
+                <p class="skills__item">
+                  Адаптив
+                </p>
+              </div>
+              <ul class="skills__about">
+                <li class="skills__about-skill">Lorem ipsum dolor sit.</li>
+                <li class="skills__about-skill">Lorem, ipsum dolor.</li>
+                <li class="skills__about-skill">Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+          </li>
+          <li tabindex="1" class="skills__block fade skills__eight">
+            <div class="skills__inner-wrapper">
+              <div class="skills__left">
+                <span class="skills__SCSS skills__icon"></span>
+                <p class="skills__item">
+                  SCSS
+                </p>
+              </div>
+              <ul class="skills__about">
+                <li class="skills__about-skill">Lorem ipsum dolor sit.</li>
+                <li class="skills__about-skill">Lorem, ipsum dolor.</li>
+                <li class="skills__about-skill">Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
-    </div> -->
-    <div id="portfolio" class="portfolio block">
+    </section>
+    <section class="portfolio fade">
       <div class="portfolio__wrapper container">
         <h2 class="portfolio__title title">
           Примеры работ
@@ -177,61 +242,53 @@
           </div>
         </li>
       </ul>
-    </div>
-    <a href="#top" class="to-top"></a>
-  </main>
-  <footer id="contacts" class="contacts">
-    <div class="contacts__wrapper container">
-      <span class="contacts__logo"></span>
-      <ul class="contacts__social">
-        <li class="contacts__item"><a tabindex="1" href="https://t.me/igor7enov" class="contacts__link"
-            target="_blank">Telegram<span class="contacts__icon tl-icon"></span></a></li>
-        <li class="contacts__item"><a tabindex="1" href="https://www.instagram.com/igor7enov/" class="contacts__link"
-            target="_blank">Instagram<span class="contacts__icon inst-icon"></span></a></li>
-        <li class="contacts__item"><a tabindex="1" href="https://vk.com/igor7enov" class="contacts__link"
-            target="_blank">VK<span class="contacts__icon vk-icon"></span></a></li>
-        <li class="contacts__item"><a tabindex="1" href="mailto:7enov.ig@gmail.com"
-            class="contacts__link">7enov.ig@gmail.com<span class="contacts__icon mail-icon"></span></a></li>
-      </ul>
-    </div>
-  </footer>
-  <div id="text-me" class="modal__text-me">
-    <div class="modal__wrapper flex">
-      <div class="modal__top flex">
-        <label class="modal__lable">
-          Форма для связи
-        </label>
-        <button class="modal__close-btn">
-        </button>
+    </section>
+    <section class="contacts fade">
+      <div class="contacts__wrapper container">
+        <div id="text-me" class="contacts__text-me">
+          <div class="contacts__top flex">
+            <h2 class="contacts__title title">
+              Способы связи
+            </h2>
+          </div>
+          <form action="#" method="POST" class="contacts__form flex contacts__form-valid">
+            <div class="contacts__text-wrapper">
+              <label class="form-label" for="message">
+                <textarea aria-label="Введите сообщение" id="message" name="message"
+                  class="forms-input contacts__massage" placeholder="Опишите идею проекта"
+                  data-validate-field="text"></textarea>
+              </label>
+            </div>
+            <div class="contacts__text-bottom flex">
+              <div class="contacts__input-wrapper">
+                <label class="form-label" for="name">
+                  <input aria-label="Ваше Имя" data-validate-field="name" id="name" type="text" name="username"
+                    class="forms-input contacts__bottom-inputs" placeholder="Как вас зовут?"></label>
+              </div>
+              <div class="contacts__input-wrapper">
+                <label class="form-label" for="email">
+                  <input aria-label="Ваш email" data-validate-field="email" id="email" type="email" name="email"
+                    class="forms-input contacts__bottom-inputs" placeholder="Email для связи"></label>
+              </div>
+            </div>
+              <button type="submit" class="button btn contacts__send-form">Отправить</button>
+          </form>
+        </div>
+        <span class="contacts__logo"></span>
+        <ul class="contacts__social">
+          <li class="contacts__item"><a tabindex="1" href="https://t.me/igor7enov" class="contacts__link"
+              target="_blank">Telegram<span class="contacts__icon tl-icon"></span></a></li>
+          <li class="contacts__item"><a tabindex="1" href="https://www.instagram.com/igor7enov/" class="contacts__link"
+              target="_blank">Instagram<span class="contacts__icon inst-icon"></span></a></li>
+          <li class="contacts__item"><a tabindex="1" href="https://vk.com/igor7enov" class="contacts__link"
+              target="_blank">VK<span class="contacts__icon vk-icon"></span></a></li>
+          <li class="contacts__item"><a tabindex="1" href="mailto:7enov.ig@gmail.com"
+              class="contacts__link">7enov.ig@gmail.com<span class="contacts__icon mail-icon"></span></a></li>
+        </ul>
       </div>
-      <form action="#" method="POST" class="modal__form flex modal__form-valid">
-        <div class="modal__text-wrapper">
-          <label class="form-label" for="message">
-            <textarea aria-label="Введите сообщение" id="message" name="message" class="forms-input modal__massage"
-              placeholder="Опишите идею проекта" data-validate-field="text"></textarea>
-          </label>
-        </div>
-        <div class="modal__text-bottom flex">
-          <div class="modal__input-wrapper">
-            <label class="form-label" for="name">
-              <input aria-label="Ваше Имя" data-validate-field="name" id="name" type="text" name="username"
-                class="forms-input modal__bottom-inputs" placeholder="Как к вам обращаться?"></label>
-          </div>
-          <div class="modal__input-wrapper">
-            <label class="form-label" for="email">
-              <input aria-label="Ваш email" data-validate-field="email" id="email" type="email" name="email"
-                class="forms-input modal__bottom-inputs" placeholder="Email для связи"></label>
-          </div>
-        </div>
-        <div class="modal__buttons flex">
-          <button type="submit" class="button btn modal__send-form">Отправить</button>
-        </div>
-      </form>
-    </div>
-
-
-  </div>
-
+    </section>
+  </main>
+  <footer class="spacer bottom-spacer fade"></footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="./js/just-validate.min.js"></script>
   <script src="./js/script.js"></script>
