@@ -137,7 +137,7 @@ section {
 .fade {
   opacity: 0;
   visibility: hidden;
-  transition: all .9s ease;
+  transition: all 0.9s ease;
 }
 
 .fade.active {
@@ -166,6 +166,7 @@ section {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+  filter: drop-shadow(0px 0px 10px rgba(255, 0, 0, 0.99));
 }
 
 .header__link {
@@ -273,23 +274,6 @@ section {
   transition-timing-function: ease;
 }
 
-.hero__text-me:focus,
-.hero__text-me:hover {
-  box-shadow: 0 0 1px var(--Orange), 0 0 3px var(--Gainsborough);
-}
-
-.hero__text-me:focus {
-  background-color: var(--InternationalOrange);
-}
-
-.hero__text-me:hover {
-  background-color: var(--LuminousBrightOrange);
-}
-
-.hero__text-me:active {
-  background-color: var(--TheRedTree);
-}
-
 .hero__right {
   position: relative;
   display: block;
@@ -345,46 +329,6 @@ section {
   right: -6%;
   bottom: -5%;
 }
-
-/* to top */
-
-/* .to-top {
-  position: fixed;
-  background-image: url("../img/arrow-up-def.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  max-width: 40px;
-  max-height: 40px;
-  width: 100%;
-  height: 100%;
-  right: 30px;
-  bottom: 0;
-  border-radius: 50%;
-  opacity: 0;
-  transition-property: bottom, opacity, background-image;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
-  pointer-events: none;
-  z-index: 20;
-}
-
-.to-top:focus {
-  background-image: url("../img/arrow-up-foc.svg");
-}
-
-.to-top:hover {
-  background-image: url("../img/arrow-up-hov.svg");
-}
-
-.to-top:active {
-  background-image: url("../img/arrow-up-act.svg");
-}
-
-.to-top.active {
-  pointer-events: all;
-  bottom: 30px;
-  opacity: 1;
-} */
 
 /* skill-tree */
 
@@ -621,7 +565,6 @@ section {
   background-size: cover;
 }
 
-
 .project:hover .project__img,
 .project__img:focus {
   transform: translateY(0);
@@ -716,6 +659,20 @@ section {
   margin-bottom: 15px;
 }
 
+.contacts__text-wrapper {
+  transform: translateX(40%);
+  transition-delay: 200ms;
+}
+
+.contacts__input-wrapper {
+  transform: translateX(40%);
+  transition-delay: 400ms;
+}
+
+.contacts__input-wrapper:nth-child(2) {
+  transition-delay: 600ms;
+}
+
 .form-label {
   position: relative;
   display: flex;
@@ -742,9 +699,7 @@ section {
   border: 1px solid var(--Gainsborough);
   background-color: black;
   padding: 10px;
-  transition-property: background-color, color, border;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
+  transition: all 0.3s ease;
 }
 
 .forms-input:focus,
@@ -771,21 +726,80 @@ section {
 }
 
 .contacts__send-form {
-  padding-top: 3px;
-  transition: box-shadow 0.3s ease;
-  border-radius: 5px;
-  padding: 5px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 70px;
   align-self: center;
+  position: relative;
+  overflow: hidden;
   flex-direction: column;
-  background-color: var(--Orange);
-  transition-property: background-color, box-shadow;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
+  background-color: var(--DarkPurplishBlue);
+  transform: translateX(200%);
+  transition-delay: 800ms;
+}
+
+.contacts__send-form span {
+  position: absolute;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.contacts__send-form span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--White);
+}
+
+.contacts__send-form:hover span:nth-child(1) {
+  left: 0;
+}
+
+.contacts__send-form span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: var(--White);
+  transition-delay: 400ms;
+}
+
+.contacts__send-form:hover span:nth-child(2) {
+  top: 0;
+}
+
+.contacts__send-form span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--White);
+}
+
+.contacts__send-form:hover span:nth-child(3) {
+  right: 0;
+}
+
+.contacts__send-form span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: var(--White);
+  transition-delay: 400ms;  
+}
+
+.contacts__send-form:hover span:nth-child(4) {
+  bottom: 0;
 }
 
 .contacts__send-form:focus,
 .contacts__send-form:hover {
-  box-shadow: 0 0 3px var(--Orange), 0 0 5px var(--Gainsborough);
+  box-shadow: 0 0 5px #ff6f61, 0 0 10px #ff6f61, 0 0 20px #ff6f61;
+  
 }
 
 .contacts__send-form:focus {

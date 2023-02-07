@@ -251,8 +251,8 @@
               Способы связи
             </h2>
           </div>
-          <form action="#" method="POST" class="contacts__form flex contacts__form-valid">
-            <div class="contacts__text-wrapper">
+          <form action="./send.php" method="POST" class="contacts__form flex contacts__form-valid">
+            <div class="contacts__text-wrapper fade">
               <label class="form-label" for="message">
                 <textarea aria-label="Введите сообщение" id="message" name="message"
                   class="forms-input contacts__massage" placeholder="Опишите идею проекта"
@@ -260,18 +260,23 @@
               </label>
             </div>
             <div class="contacts__text-bottom flex">
-              <div class="contacts__input-wrapper">
+              <div class="contacts__input-wrapper fade">
                 <label class="form-label" for="name">
                   <input aria-label="Ваше Имя" data-validate-field="name" id="name" type="text" name="username"
                     class="forms-input contacts__bottom-inputs" placeholder="Как вас зовут?"></label>
               </div>
-              <div class="contacts__input-wrapper">
+              <div class="contacts__input-wrapper fade">
                 <label class="form-label" for="email">
                   <input aria-label="Ваш email" data-validate-field="email" id="email" type="email" name="email"
                     class="forms-input contacts__bottom-inputs" placeholder="Email для связи"></label>
               </div>
             </div>
-              <button type="submit" class="button btn contacts__send-form">Отправить</button>
+              <button type="submit" class="button btn contacts__send-form fade">Отправить заявку
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
           </form>
         </div>
         <span class="contacts__logo"></span>
