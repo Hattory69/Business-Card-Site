@@ -18,18 +18,18 @@
     <div class="container header__wrapper flex">
       <span class="header__logo">
       </span>
-      <div class="header__right">
+      <nav class="header__right">
         <a class="header__link hero-js fade">О себе</a>
         <a class="header__link skills-js fade">Навыки</a>
         <a class="header__link portfolio-js fade">Портфлоио</a>
         <a class="header__link contacts-js fade">Контакты</a>
-      </div>
+      </nav>
     </div>
   </header>
   <main>
     <section class="hero fade flex">
       <span class="spacer top-spacer fade"></span>
-      <div class="hero__wrapper container fade flex">
+      <div class="hero__wrapper fade flex">
         <div class="hero__left">
           <div class="hero__top-left flex">
             <p class="hero__hello fade">
@@ -43,25 +43,14 @@
               Я web-разработчик.
             </p>
             <p class="hero__about">
-              Мне 27 лет, в данный момент работаю в крупонй российской IT компании
+              Мне 27 лет.
+              Родился и вырос в Санкт-Петербурге.
+              Работаю в Avito, на должности не свзяанной с разработкой. Именно окружение из коллег разработчиков и направило меня на путь WebDev.
+              Было очень больно слышать от коллег всякине понятный слова вроде <code class="hero__code">&lt;Демоны в клетке&gt;</code> и тому подобное.
+              Начал свой пусть с онлайн-курсов. Набравшись опыта, пошёл на курсы Тимлида из Авито <a class="hero__sd-link" target="_blank" href="https://sdcode.ru/">@sergeydmitrievskyit</a>. 
             </p>
+            <button class="start-game">game</button>
           </div>
-        </div>
-        <div id="anchor" class="hero__right">
-          <img src="./img/hero-head.png" alt="" class="hero__head">
-          <div class="hero__eye left-eye eye">
-          </div>
-          <div class="hero__eye right-eye eye">
-          </div>
-          <p class="hero__bio bio-left">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis recusandae necessitatibus ducimus nihil
-            commodi culpa, a sit corporis tempore, maiores voluptate officia assumenda perferendis quam. Quam iusto
-            vitae exercitationem hic.
-          </p>
-          <p class="hero__bio bio-right">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus totam assumenda animi repudiandae?
-            Officiis facere modi, fuga sit repellendus esse.
-          </p>
         </div>
       </div>
     </section>
@@ -283,8 +272,8 @@
         <ul class="contacts__social">
           <li class="contacts__item"><a tabindex="1" href="https://t.me/igor7enov" class="contacts__link"
               target="_blank">Telegram<span class="contacts__icon tl-icon"></span></a></li>
-          <li class="contacts__item"><a tabindex="1" href="https://www.instagram.com/igor7enov/" class="contacts__link"
-              target="_blank">Instagram<span class="contacts__icon inst-icon"></span></a></li>
+          <!-- <li class="contacts__item"><a tabindex="1" href="https://www.instagram.com/igor7enov/" class="contacts__link"
+              target="_blank">Instagram<span class="contacts__icon inst-icon"></span></a></li> -->
           <li class="contacts__item"><a tabindex="1" href="https://vk.com/igor7enov" class="contacts__link"
               target="_blank">VK<span class="contacts__icon vk-icon"></span></a></li>
           <li class="contacts__item"><a tabindex="1" href="mailto:7enov.ig@gmail.com"
@@ -292,6 +281,13 @@
         </ul>
       </div>
     </section>
+    <span id="anchor" class="my-head fade">
+      <img src="./img/hero-head.png" alt="" class="my-head__img">
+      <div class="left-eye eye">
+      </div>
+      <div class="right-eye eye">
+      </div>
+    </span>
   </main>
   <footer class="spacer bottom-spacer fade"></footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

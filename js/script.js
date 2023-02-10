@@ -73,44 +73,110 @@ function angle(cx, cy, ex, ey) {
   return deg;
 }
 
-const showHero = document.querySelector('.hero-js');
-const heroNod = document.querySelector('.hero');
+const showHero = document.querySelector(".hero-js");
+const heroNod = document.querySelector(".hero");
 
-showHero.addEventListener('click', function() {
-  heroNod.classList.add('active');
-  skillsNod.classList.remove('active');
-  portfolioNod.classList.remove('active');
-  contactsNod.classList.remove('active');
+showHero.addEventListener("click", function () {
+  heroNod.classList.add("active");
+  skillsNod.classList.remove("active");
+  portfolioNod.classList.remove("active");
+  contactsNod.classList.remove("active");
 });
 
-const showSkills = document.querySelector('.skills-js');
-const skillsNod = document.querySelector('.skills');
+const showSkills = document.querySelector(".skills-js");
+const skillsNod = document.querySelector(".skills");
 
-showSkills.addEventListener('click', function() {
-  skillsNod.classList.add('active');
-  heroNod.classList.remove('active');
-  portfolioNod.classList.remove('active');
-  contactsNod.classList.remove('active');
+showSkills.addEventListener("click", function () {
+  skillsNod.classList.add("active");
+  heroNod.classList.remove("active");
+  portfolioNod.classList.remove("active");
+  contactsNod.classList.remove("active");
 });
 
-const showPortfolio = document.querySelector('.portfolio-js');
-const portfolioNod = document.querySelector('.portfolio');
+const showPortfolio = document.querySelector(".portfolio-js");
+const portfolioNod = document.querySelector(".portfolio");
 
-showPortfolio.addEventListener('click', function() {
-  portfolioNod.classList.add('active');
-  skillsNod.classList.remove('active');
-  heroNod.classList.remove('active');
-  contactsNod.classList.remove('active');
+showPortfolio.addEventListener("click", function () {
+  portfolioNod.classList.add("active");
+  skillsNod.classList.remove("active");
+  heroNod.classList.remove("active");
+  contactsNod.classList.remove("active");
 });
 
-const showContacts = document.querySelector('.contacts-js');
-const contactsNod = document.querySelector('.contacts');
+const showContacts = document.querySelector(".contacts-js");
+const contactsNod = document.querySelector(".contacts");
 
-showContacts.addEventListener('click', function() {
-  contactsNod.classList.add('active');
-  skillsNod.classList.remove('active');
-  heroNod.classList.remove('active');
-  portfolioNod.classList.remove('active');
+showContacts.addEventListener("click", function () {
+  contactsNod.classList.add("active");
+  skillsNod.classList.remove("active");
+  heroNod.classList.remove("active");
+  portfolioNod.classList.remove("active");
 });
 
+const headDoodle = document.querySelector(".my-head");
 
+headDoodle.addEventListener("click", function () {
+  headDoodle.classList.toggle("show");
+});
+
+// game
+
+const startGame = document.querySelector(".start-game");
+let isGameActive = false;
+let maxWidth = 90;
+let minWidth = 0;
+
+startGame.addEventListener("click", function () {
+  isGameActive = !isGameActive;
+  if (isGameActive === true) {
+    headDoodle.addEventListener("mouseover", dudleGame);
+  } else {
+    headDoodle.removeEventListener("mouseover", dudleGame);
+    document.body.onmousedown = () => {
+      defaultMouse();
+      headDoodle.classList.remove("hide");
+      headDoodle.classList.remove("show");
+      headDoodle.classList.add("active");
+    };
+  }
+});
+
+function dudleGame(event) {
+  mouseHummer();
+  headDoodle.classList.add("hide");
+  setTimeout(() => {
+    headDoodle.style.right = `${
+      Math.random() * (maxWidth - minWidth) + minWidth
+    }%`;
+    headDoodle.classList.add("show");
+    headDoodle.classList.remove("hide");
+  }, 1000);
+}
+
+function mouseHummer(event) {
+  document.body.onmousedown = () => {
+    document.body.style = `cursor: url('../img/hammer-down.svg'), auto;`;
+  };
+
+  document.body.onmouseup = () => {
+    document.body.style = `cursor: url('../img/hammer.svg'), auto;`;
+  };
+
+  document.body.onmousemove = () => {
+    document.body.style = `cursor: url('../img/hammer.svg'), auto;`;
+  };
+}
+
+function defaultMouse(event) {
+  document.body.onmousedown = () => {
+    document.body.style = `cursor: default;`;
+  };
+
+  document.body.onmouseup = () => {
+    document.body.style = `cursor: default;`;
+  };
+
+  document.body.onmousemove = () => {
+    document.body.style = `cursor: default;`;
+  };
+}

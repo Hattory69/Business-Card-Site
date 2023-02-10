@@ -45,12 +45,14 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  cursor: default;
 }
 
 main {
   width: 100%;
   position: relative;
   flex-grow: 1;
+  overflow: hidden;
 }
 
 a {
@@ -98,6 +100,7 @@ ul {
   --BlackBlue: #141216;
   --DarkPurplishBlue: #131123;
   --Granite: #292e39;
+  --DarkAmber: #FF8000;
 }
 
 main {
@@ -211,9 +214,12 @@ section {
 /* Hero */
 
 .hero__wrapper {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+  width: 100%;
   transform: translateY(30%);
   justify-content: space-between;
-  align-items: center;
 }
 
 .hero__left {
@@ -274,60 +280,12 @@ section {
   transition-timing-function: ease;
 }
 
-.hero__right {
-  position: relative;
-  display: block;
-  border: 20px solid var(--LuminousBrightOrange);
-  border-radius: 50%;
-  filter: drop-shadow(0px 0px 10px rgba(255, 164, 32, 0.99));
-  max-height: 400px;
-  max-width: 400px;
+.hero__code {
+  color: #1D8348;
 }
 
-.hero__head {
-  top: 20px;
-  position: relative;
-  object-fit: none;
-  width: 100%;
-}
-
-.hero__eye {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  display: block;
-  background-image: url("../img/eye.svg");
-  background-size: 23px;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-}
-
-.left-eye {
-  top: 208px;
-  left: 130px;
-}
-
-.right-eye {
-  top: 208px;
-  left: 236px;
-}
-
-.hero__bio {
-  position: absolute;
-  padding: 5px;
-  max-width: 200px;
-  background-color: var(--DarkPurplishBlue);
-  border-radius: 10px;
-}
-
-.bio-left {
-  top: 0;
-  left: -30%;
-}
-
-.bio-right {
-  right: -6%;
-  bottom: -5%;
+.hero__sd-link {
+  color: var(--DarkAmber);
 }
 
 /* skill-tree */
@@ -884,6 +842,63 @@ section {
 .contacts__link:focus .mail-icon {
   background-image: url("../img/mail-icon-hov.svg");
 }
+
+/* my head */
+
+.my-head {
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  transform: translateY(100%);
+  right: 0;
+  display: block;
+  max-height: 200px;
+  max-width: 200px;
+  z-index: 3;
+  transition: all .9s ease;
+}
+
+.my-head.active {
+  transform: translateY(42%);
+}
+
+.my-head.show {
+  transform: translateY(10%);
+}
+
+.my-head.hide {
+  transition-duration: .3s;
+  transform: translateY(100%);
+}
+
+.my-head__img {
+  position: relative;
+  object-fit: contain;
+  width: 100%;
+}
+
+.eye {
+  bottom: 40px;
+  width: 10px;
+  height: 15px;
+  position: absolute;
+  display: block;
+  background-image: url("../img/eye.svg");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.left-eye {
+  bottom: 91px;
+  left: 73px;
+}
+
+.right-eye {
+  bottom: 91px;
+    left: 117px;
+}
+
 
 @media (max-width: 1024px) {
   .hero__right {
