@@ -100,7 +100,7 @@ ul {
   --BlackBlue: #141216;
   --DarkPurplishBlue: #131123;
   --Granite: #292e39;
-  --DarkAmber: #FF8000;
+  --DarkAmber: #ff8000;
 }
 
 main {
@@ -223,7 +223,7 @@ section {
 }
 
 .hero__left {
-  max-width: 460px;
+  width: 50%;
 }
 
 .hero__hello {
@@ -281,11 +281,42 @@ section {
 }
 
 .hero__code {
-  color: #1D8348;
+  color: #1d8348;
 }
 
 .hero__sd-link {
   color: var(--DarkAmber);
+}
+
+.hero__right {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex: 1;
+}
+
+.hero__my-photo {
+  display: flex;
+  object-fit: cover;
+  border-radius: 40px;
+  height: 40%;
+  width: 40%;
+  flex: 5;
+  transition: all 0.3s ease;
+}
+
+.hero__my-photo:hover {
+  height: 100%;
+  width: 100%;
+  flex: 5;
+}
+
+.second-photo {
+  align-self: flex-end;
+}
+
+.third-photo {
+  align-self: center;
 }
 
 /* skill-tree */
@@ -747,7 +778,7 @@ section {
   width: 2px;
   height: 100%;
   background-color: var(--White);
-  transition-delay: 400ms;  
+  transition-delay: 400ms;
 }
 
 .contacts__send-form:hover span:nth-child(4) {
@@ -757,7 +788,6 @@ section {
 .contacts__send-form:focus,
 .contacts__send-form:hover {
   box-shadow: 0 0 5px #ff6f61, 0 0 10px #ff6f61, 0 0 20px #ff6f61;
-  
 }
 
 .contacts__send-form:focus {
@@ -855,7 +885,9 @@ section {
   max-height: 200px;
   max-width: 200px;
   z-index: 3;
-  transition: all .9s ease;
+  transition: all 0.9s ease;
+  -webkit-touch-callout: none;
+  user-select: none;
 }
 
 .my-head.active {
@@ -867,7 +899,7 @@ section {
 }
 
 .my-head.hide {
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   transform: translateY(100%);
 }
 
@@ -896,9 +928,8 @@ section {
 
 .right-eye {
   bottom: 91px;
-    left: 117px;
+  left: 117px;
 }
-
 
 @media (max-width: 1024px) {
   .hero__right {

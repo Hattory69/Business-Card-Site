@@ -131,12 +131,9 @@ startGame.addEventListener("click", function () {
   if (isGameActive === true) {
     headDoodle.addEventListener("mouseover", dudleGame);
   } else {
+    document.body.onmousemove = () => {
     headDoodle.removeEventListener("mouseover", dudleGame);
-    document.body.onmousedown = () => {
-      defaultMouse();
-      headDoodle.classList.remove("hide");
-      headDoodle.classList.remove("show");
-      headDoodle.classList.add("active");
+      stopGame();
     };
   }
 });
@@ -145,11 +142,13 @@ function dudleGame(event) {
   mouseHummer();
   headDoodle.classList.add("hide");
   setTimeout(() => {
-    headDoodle.style.right = `${
+    headDoodle.style = `right: ${
       Math.random() * (maxWidth - minWidth) + minWidth
-    }%`;
+    }%;
+    cursor: url('../img/hammer-down.svg'), auto;`
     headDoodle.classList.add("show");
     headDoodle.classList.remove("hide");
+    // headDoodle.style = `cursor: url('../img/hammer-down.svg'), auto;`;
   }, 1000);
 }
 
@@ -167,7 +166,7 @@ function mouseHummer(event) {
   };
 }
 
-function defaultMouse(event) {
+function stopGame(event) {
   document.body.onmousedown = () => {
     document.body.style = `cursor: default;`;
   };
@@ -179,4 +178,10 @@ function defaultMouse(event) {
   document.body.onmousemove = () => {
     document.body.style = `cursor: default;`;
   };
+
+  headDoodle.style = `cursor: auto;`;
+
+  headDoodle.classList.remove("hide");
+  headDoodle.classList.remove("show");
+  headDoodle.classList.add("active");
 }
