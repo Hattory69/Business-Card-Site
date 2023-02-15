@@ -101,11 +101,7 @@ ul {
   --DarkPurplishBlue: #131123;
   --Granite: #292e39;
   --DarkAmber: #ff8000;
-}
-
-main {
-  overflow: hidden;
-  position: relative;
+  --DarkSpringGreen: #1d8348;
 }
 
 .spacer {
@@ -124,6 +120,7 @@ main {
 }
 
 .bottom-spacer {
+  height: 100px;
   transform: translateY(-30%);
   background-image: url("../img/bottom-spacer.svg");
 }
@@ -215,11 +212,12 @@ section {
 
 .hero__wrapper {
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 15px;
   max-width: 1200px;
   width: 100%;
   transform: translateY(30%);
   justify-content: space-between;
+  align-items: center;
 }
 
 .hero__left {
@@ -263,25 +261,12 @@ section {
   font-size: 40px;
 }
 
-.hero__about:last-of-type {
-  margin-bottom: 15px;
-}
-
-.hero__text-me {
-  padding: 5px;
-  color: var(--Black);
-  font-weight: 600;
-  font-size: 15px;
-  background-color: var(--Orange);
-  border: 1px solid transparent;
-  border-radius: 5px;
-  transition-property: background-color, box-shadow;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
+.hero__about {
+  font-size: 20px;
 }
 
 .hero__code {
-  color: #1d8348;
+  color: var(--DarkSpringGreen);
 }
 
 .hero__sd-link {
@@ -289,39 +274,198 @@ section {
 }
 
 .hero__right {
-  width: 30%;
-  height: 100%;
   display: flex;
-  flex: 1;
+  align-content: center;
+  position: relative;
+  width: 40%;
+  height: 100%;
 }
 
 .hero__my-photo {
-  display: flex;
   object-fit: cover;
-  border-radius: 40px;
-  height: 40%;
-  width: 40%;
-  flex: 5;
-  transition: all 0.3s ease;
-}
-
-.hero__my-photo:hover {
-  height: 100%;
+  position: relative;
   width: 100%;
-  flex: 5;
-}
-
-.second-photo {
-  align-self: flex-end;
-}
-
-.third-photo {
+  height: fit-content;
+  border-radius: 50%;
+  object-fit: cover;
   align-self: center;
+  animation: neonLight 10s infinite alternate;
+  box-shadow: 0px 2px 5px 7px var(--RubyRed);
+}
+
+@keyframes neonLight {
+  0% {
+    border-radius: 50% 50% 50% 50%;
+  }
+  25% {
+    border-radius: 10% 30% 20% 40%;
+  }
+  50% {
+    border-radius: 40% 10% 30% 20%;
+  }
+  75% {
+    border-radius: 20% 40% 10% 30%;
+  }
+  100% {
+    border-radius: 30% 20% 40% 10%;
+  }
 }
 
 /* skill-tree */
 
-.skills {
+.skills__wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills__title {
+  width: 100%;
+}
+
+.skills__skill-tree {
+  padding: 0 20px;
+  height: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.skills__block {
+  position: relative;
+  background-color: var(--DarkPurplishBlue);
+  overflow: hidden;
+}
+
+.skills__cover {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  transition: all .9s ease;
+}
+
+.skills__block:hover .skills__cover {
+  transform: scale(.7);
+  width: 25%;
+  height: 60%;
+}
+
+.skills__block:hover .skills__about {
+  right: 30%;
+}
+
+.skills__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  align-self: center;
+  right: -100%;
+  height: 100%;
+  transition: all .9s ease;
+}
+
+.skills__icon {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  align-self: center;
+  max-width: 150px;
+  width: 100px;
+  max-height: 150px;
+  height: 100px;
+  transition: background-image 0.3s ease;
+}
+
+.skills__name-of {
+  align-self: center;
+}
+
+.skills__html {
+  background-image: url("../img/skills__html-def.svg");
+}
+
+.skills__block:hover .skills__html,
+.skills__block:focus .skills__html {
+  background-image: url("../img/skills__html-hov.svg");
+}
+
+.skills__figma {
+  background-image: url("../img/skills__figma-def.svg");
+}
+
+.skills__block:hover .skills__figma,
+.skills__block:focus .skills__figma {
+  background-image: url("../img/skills__figma-hov.svg");
+}
+
+.skills__css {
+  background-image: url("../img/skills__css-def.svg");
+}
+
+.skills__block:hover .skills__css,
+.skills__block:focus .skills__css {
+  background-image: url("../img/skills__css-hov.svg");
+}
+
+.skills__html {
+  background-image: url("../img/skills__html-def.svg");
+}
+
+.skills__js {
+  background-image: url("../img/skills__js-def.svg");
+}
+
+.skills__block:hover .skills__js,
+.skills__block:focus .skills__js {
+  background-image: url("../img/skills__js-hov.svg");
+}
+
+.skills__mails {
+  background-image: url("../img/skills__mails-def.svg");
+}
+
+.skills__block:hover .skills__mails,
+.skills__block:focus .skills__mails {
+  background-image: url("../img/skills__mails-hov.svg");
+}
+
+.skills__git {
+  background-image: url("../img/skills__git-def.svg");
+}
+
+.skills__block:hover .skills__git,
+.skills__block:focus .skills__git {
+  background-image: url("../img/skills__git-hov.svg");
+}
+
+.skills__adapt {
+  background-image: url("../img/skills__adapt-def.svg");
+}
+
+.skills__block:hover .skills__adapt,
+.skills__block:focus .skills__adapt {
+  background-image: url("../img/skills__adapt-hov.svg");
+}
+
+.skills__SCSS {
+  background-image: url("../img/skills__SCSS-def.svg");
+}
+
+.skills__block:hover .skills__SCSS,
+.skills__block:focus .skills__SCSS {
+  background-image: url("../img/skills__SCSS-hov.svg");
+}
+
+.skills__block:hover .skills__name-of,
+.skills__block:focus .skills__name-of {
+  text-shadow: 0 0 1px var(--Gainsborough), 0 0 3px var(--Gainsborough);
+} */
+
+/* .skills {
   transform: translateX(-110%);
 }
 
@@ -523,7 +667,7 @@ section {
 .skills__block:hover .skills__item,
 .skills__block:focus .skills__item {
   text-shadow: 0 0 1px var(--Gainsborough), 0 0 3px var(--Gainsborough);
-}
+} */
 
 /* portfolio */
 
@@ -533,11 +677,12 @@ section {
 
 .project__list {
   position: relative;
+  height: 100%;
 }
 
 .project {
   transform: translateY(100%);
-  height: 200px;
+  height: 30%;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -929,35 +1074,4 @@ section {
 .right-eye {
   bottom: 91px;
   left: 117px;
-}
-
-@media (max-width: 1024px) {
-  .hero__right {
-    display: flex;
-    flex-direction: column;
-    border: none;
-    width: 100%;
-  }
-
-  .hero__head,
-  .eye {
-    display: none;
-  }
-
-  .hero__bio {
-    top: inherit;
-    right: inherit;
-    bottom: inherit;
-    left: inherit;
-    position: relative;
-    max-width: 300px;
-  }
-
-  .hero__bio:first-of-type {
-    margin-bottom: 10px;
-  }
-
-  .bio-right {
-    align-self: flex-end;
-  }
 }
