@@ -120,6 +120,7 @@ ul {
 }
 
 .bottom-spacer {
+  height: 150px;
   transform: translateY(-30%);
   background-image: url("../img/bottom-spacer.svg");
 }
@@ -265,10 +266,52 @@ section {
 
 .hero__about {
   font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .hero__sd-link {
+  border-radius: 5px;
   color: var(--DarkAmber);
+  transition: all 0.3s ease;
+}
+
+.hero__sd-link:hover,
+.hero__sd-link:focus {
+  background-color: var(--White);
+  color: var(--Black);
+}
+
+.hero__contact-me {
+  border-radius: 10px;
+  padding: 10px;
+  animation: flicker 1.5s infinite alternate;
+  transition: all 0.3s ease;
+}
+
+.hero__contact-me:hover,
+.hero__contact-me:focus {
+  background-color: var(--Gainsborough);
+  color: var(--Black);
+}
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    box-shadow: 0 0 4px var(--BlackBlue), 0 0 7px var(--DarkRed),
+      0 0 10px var(--DarkAmber);
+    text-shadow: 0 0 4px #fff, 0 0 7px var(--BlackBlue);
+  }
+
+  20%,
+  24%,
+  55% {
+    box-shadow: none;
+    text-shadow: none;
+  }
 }
 
 .hero__right {
@@ -313,7 +356,7 @@ section {
 
 .skills {
   transform: translateX(-110%);
-  background-image: url('../img/circle-scatter-haikei.svg');
+  background-image: url("../img/circle-scatter-haikei.svg");
 }
 
 .skills__wrapper {
@@ -336,12 +379,12 @@ section {
 
 .skills__block {
   display: flex;
-  transform: scale(.1);
+  transform: translateX(-100%);
   border-radius: 10px;
   position: relative;
   height: 100%;
   background-color: rgba(225, 225, 225, 0.02);
-  outline: 1px solid rgba(225, 225, 225, .3);
+  outline: 1px solid rgba(225, 225, 225, 0.3);
   overflow: hidden;
 }
 
@@ -357,14 +400,14 @@ section {
   left: 0px;
   background: radial-gradient(
     800px circle at var(--mouse-x) var(--mouse-y),
-    rgba(225, 225, 225, 0.2), 
+    rgba(225, 225, 225, 0.2),
     transparent 40%
-    );
+  );
   border-radius: inherit;
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition:  opacity .5s;
+  transition: opacity 0.5s;
   z-index: 2;
 }
 
@@ -372,38 +415,15 @@ section {
   opacity: 1;
 }
 
-.skills__block:nth-child(2) {
-  /* transition-delay: 200ms; */
-}
-
 .skills__block:nth-child(3) {
-  /* transition-delay: 300ms; */
   grid-column: span 2;
 }
 
 .skills__block:nth-child(4) {
-  /* transition-delay: 400ms; */
   grid-column: span 2;
 }
 
-.skills__block:nth-child(5) {
-  /* transition-delay: 500ms; */
-}
-
-.skills__block:nth-child(6) {
-  /* transition-delay: 600ms; */
-}
-
-.skills__block:nth-child(7) {
-  /* transition-delay: 700ms; */
-}
-
-.skills__block:nth-child(8) {
-  /* transition-delay: 800ms; */
-}
-
 .skills__block:nth-child(9) {
-  /* transition-delay: 900ms; */
   grid-column: span 2;
 }
 
@@ -413,12 +433,12 @@ section {
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
-  transition: all .9s ease;
+  transition: all 0.9s ease;
 }
 
 .skills__block:hover .skills__cover,
 .skills__block:focus .skills__cover {
-  transform: scale(.7);
+  transform: scale(0.7);
   width: 20%;
   height: 60%;
 }
@@ -436,7 +456,7 @@ section {
   align-self: center;
   height: 100%;
   width: 0;
-  transition: all .9s ease;
+  transition: all 0.9s ease;
 }
 
 .skills__icon {
@@ -534,13 +554,13 @@ section {
 .skills__block:hover .skills__name-of,
 .skills__block:focus .skills__name-of {
   text-shadow: 0 0 1px var(--Gainsborough), 0 0 3px var(--Gainsborough);
-} 
+}
 
 /* portfolio */
 
 .portfolio {
   transform: translateY(120%);
-  background-image: url('../img/polygon-scatter-haikei.svg');
+  background-image: url("../img/polygon-scatter-haikei.svg");
 }
 
 .project__list {
@@ -630,7 +650,7 @@ section {
 
 .contacts {
   transform: translateX(120%);
-  background-image: url('../img/symbol-scatter-haikei.svg');
+  background-image: url("../img/symbol-scatter-haikei.svg");
 }
 
 .contacts__wrapper {
@@ -688,7 +708,8 @@ section {
   background-color: var(--Black);
   border-radius: 15px;
   padding: 0 20px;
-  box-shadow: 0 0 5px var(--Crimson), 0 0 7px var(--Crimson), 0 0 10px var(--Crimson);
+  box-shadow: 0 0 5px var(--Crimson), 0 0 7px var(--Crimson),
+    0 0 10px var(--Crimson);
 }
 
 .contacts__massage {
