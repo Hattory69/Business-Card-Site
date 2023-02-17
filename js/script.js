@@ -24,16 +24,16 @@ new window.JustValidate(".contacts__form-valid", {
     email: {
       required: true,
       email: true,
-      maxLength: 20,
+      maxLength: 30,
     },
   },
 
-  colorWrong: "#C04000",
+  colorWrong: "#dc143c",
   messages: {
     text: {
       required: "Опишите пожалуйста проект",
-      minLength: "Недостасточно символов",
-      maxLength: "Превышен лимит символов",
+      minLength: "Чуть подробнее",
+      maxLength: "Превышен лимит в 300 символов",
     },
     name: {
       required: "Вы не ввели имя",
@@ -179,9 +179,24 @@ function stopGame(event) {
     document.body.style = `cursor: default;`;
   };
 
-  headDoodle.style = `cursor: auto;`;
+  headDoodle.style = `cursor: auto;
+  transition: all .9s ease;`;
 
   headDoodle.classList.remove("hide");
   headDoodle.classList.remove("show");
   headDoodle.classList.add("active");
+}
+
+const lightOnMouseMove = e => {
+  const {currentTarget: target } = e;
+const rect = target.getBoundingClientRect(),
+  x = e.clientX - rect.left;
+  y = e.clientY - rect.top;
+
+  target.style.setProperty('--mouse-x', `${x}px`);
+  target.style.setProperty('--mouse-y', `${y}px`);
+}
+
+for(const card of document.querySelectorAll('.skills__block')) {
+  card.onmousemove = e => lightOnMouseMove(e);
 }
