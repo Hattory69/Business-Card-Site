@@ -13,30 +13,30 @@ const letters = "abcdefghijklmnopqrstuvwxyz";
 
 let interval = null;
 
-document.querySelector(".hero__sd-link").onmouseover = event => {  
+document.querySelector(".hero__sd-link").onmouseover = (event) => {
   let iteration = 0;
-  
+
   clearInterval(interval);
-  
+
   interval = setInterval(() => {
     event.target.innerText = event.target.innerText
       .split("")
       .map((letter, index) => {
-        if(index < iteration) {
+        if (index < iteration) {
           return event.target.dataset.value[index];
         }
-      
-        return letters[Math.floor(Math.random() * 26)]
+
+        return letters[Math.floor(Math.random() * 26)];
       })
       .join("");
-    
-    if(iteration >= event.target.dataset.value.length){ 
+
+    if (iteration >= event.target.dataset.value.length) {
       clearInterval(interval);
     }
-    
+
     iteration += 1;
   }, 30);
-}
+};
 
 new window.JustValidate(".contacts__form-valid", {
   rules: {
@@ -133,7 +133,7 @@ showPortfolio.addEventListener("click", function () {
 });
 
 const contactsNod = document.querySelector(".contacts");
-for(const showContacts of document.querySelectorAll('.contacts-js')) {
+for (const showContacts of document.querySelectorAll(".contacts-js")) {
   showContacts.addEventListener("click", function () {
     contactsNod.classList.add("active");
     skillsNod.classList.remove("active");
@@ -141,6 +141,31 @@ for(const showContacts of document.querySelectorAll('.contacts-js')) {
     portfolioNod.classList.remove("active");
   });
 }
+
+const skillsBtn = document.querySelectorAll(".skills__btn");
+const skillsItem = document.querySelectorAll(".skills__item");
+const skillsBlock = document.querySelectorAll('.skills__block');
+
+skillsBtn.forEach(function(skillsBtns) {
+  skillsBtns.addEventListener("click", function(e) {
+
+
+    skillsBlock.forEach(function (element) {
+      element.classList.remove("skills__selected");
+    });
+
+    skillsItem.forEach(function (element) {
+      element.classList.remove("active", 'skills__default');
+    });
+
+    const path = e.currentTarget.dataset.path;
+    document.querySelector(`[data-target="${path}"]`).classList.add("active");
+
+    const parentBlock = skillsBtns.parentNode;
+    parentBlock.classList.add('skills__selected');
+
+  });
+});
 
 const headDoodle = document.querySelector(".my-head");
 
@@ -161,7 +186,7 @@ startGame.addEventListener("click", function () {
     headDoodle.addEventListener("mouseover", dudleGame);
   } else {
     document.body.onmousemove = () => {
-    headDoodle.removeEventListener("mouseover", dudleGame);
+      headDoodle.removeEventListener("mouseover", dudleGame);
       stopGame();
     };
   }
@@ -174,7 +199,7 @@ function dudleGame(event) {
     headDoodle.style = `right: ${
       Math.random() * (maxWidth - minWidth) + minWidth
     }%;
-    cursor: url('../img/hammer-down.svg'), auto;`
+    cursor: url('../img/hammer-down.svg'), auto;`;
     headDoodle.classList.add("show");
     headDoodle.classList.remove("hide");
   }, 1000);
@@ -215,16 +240,31 @@ function stopGame(event) {
   headDoodle.classList.add("active");
 }
 
-const lightOnMouseMove = e => {
-  const {currentTarget: target } = e;
-const rect = target.getBoundingClientRect(),
-  x = e.clientX - rect.left;
+const lightOnMouseMove = (e) => {
+  const { currentTarget: target } = e;
+  const rect = target.getBoundingClientRect(),
+    x = e.clientX - rect.left;
   y = e.clientY - rect.top;
 
-  target.style.setProperty('--mouse-x', `${x}px`);
-  target.style.setProperty('--mouse-y', `${y}px`);
+  target.style.setProperty("--mouse-x", `${x}px`);
+  target.style.setProperty("--mouse-y", `${y}px`);
+};
+
+for (const card of document.querySelectorAll(".skills__block")) {
+  card.onmousemove = (e) => lightOnMouseMove(e);
 }
 
-for(const card of document.querySelectorAll('.skills__block')) {
-  card.onmousemove = e => lightOnMouseMove(e);
-}
+const heroContactBtn = document.querySelector(".contacts__send-form");
+heroContactBtn.addEventListener("click", function (e) {
+  let size = Math.max(this.offsetWidth, this.offsetHeight),
+    x = e.offsetX - size / 2,
+    y = e.offsetY - size / 2,
+    waveClick = this.querySelector(".wave");
+
+  if (!waveClick) {
+    waveClick = document.createElement("span");
+    waveClick.className = "buttonWave";
+  }
+  waveClick.style.cssText = `width:${size}px;height:${size}px;top:${y}px;left:${x}px`;
+  this.appendChild(waveClick);
+});
