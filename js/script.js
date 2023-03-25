@@ -102,68 +102,60 @@ function angle(cx, cy, ex, ey) {
   return deg;
 }
 
-const showHero = document.querySelector(".hero-js");
-const heroNod = document.querySelector(".hero");
+const navLink = document.querySelectorAll(".header__link");
+const navItem = document.querySelectorAll(".item-js");
+const borderAnim = document.querySelectorAll(".main__borders");
+const topBorder = document.querySelector(".main__wrapper :nth-child(1)");
+const rightBorder = document.querySelector(".main__wrapper :nth-child(2)");
+const bottomBorder = document.querySelector(".main__wrapper :nth-child(3)");
+const leftBorder = document.querySelector(".main__wrapper :nth-child(4)");
+const borderWidth = '50%';
 
-showHero.addEventListener("click", function () {
-  heroNod.classList.add("active");
-  skillsNod.classList.remove("active");
-  portfolioNod.classList.remove("active");
-  contactsNod.classList.remove("active");
+borderAnim.forEach(function (border) {
+  border.classList.add("active");
 });
 
-const showSkills = document.querySelector(".skills-js");
-const skillsNod = document.querySelector(".skills");
+navLink.forEach(function (navBtn) {
+  navBtn.addEventListener("click", function (e) {
+    document
+      .querySelector('[data-target="AboutMe"]')
+      .classList.remove("active");
 
-showSkills.addEventListener("click", function () {
-  skillsNod.classList.add("active");
-  heroNod.classList.remove("active");
-  portfolioNod.classList.remove("active");
-  contactsNod.classList.remove("active");
-});
+    navItem.forEach(function (element) {
+      element.classList.remove("active");
+    });
 
-const showPortfolio = document.querySelector(".portfolio-js");
-const portfolioNod = document.querySelector(".portfolio");
+    const path = e.currentTarget.dataset.path;
+    document.querySelector(`[data-target="${path}"]`).classList.add("active");
 
-showPortfolio.addEventListener("click", function () {
-  portfolioNod.classList.add("active");
-  skillsNod.classList.remove("active");
-  heroNod.classList.remove("active");
-  contactsNod.classList.remove("active");
-});
-
-const contactsNod = document.querySelector(".contacts");
-for (const showContacts of document.querySelectorAll(".contacts-js")) {
-  showContacts.addEventListener("click", function () {
-    contactsNod.classList.add("active");
-    skillsNod.classList.remove("active");
-    heroNod.classList.remove("active");
-    portfolioNod.classList.remove("active");
+    if (path === 'Skills') {
+      topBorder.style.left = borderWidth;
+      rightBorder.style.bottom = borderWidth;
+      bottomBorder.style.right = borderWidth;
+      leftBorder.style.top = borderWidth;
+    }
   });
-}
+});
 
 const skillsBtn = document.querySelectorAll(".skills__btn");
 const skillsItem = document.querySelectorAll(".skills__item");
-const skillsBlock = document.querySelectorAll('.skills__block');
+const skillsBlock = document.querySelectorAll(".skills__block");
 
-skillsBtn.forEach(function(skillsBtns) {
-  skillsBtns.addEventListener("click", function(e) {
-
-
+skillsBtn.forEach(function (skillsBtns) {
+  skillsBtns.addEventListener("click", function (e) {
     skillsBlock.forEach(function (element) {
       element.classList.remove("skills__selected");
     });
 
     skillsItem.forEach(function (element) {
-      element.classList.remove("active", 'skills__default');
+      element.classList.remove("active", "skills__default");
     });
 
     const path = e.currentTarget.dataset.path;
     document.querySelector(`[data-target="${path}"]`).classList.add("active");
 
     const parentBlock = skillsBtns.parentNode;
-    parentBlock.classList.add('skills__selected');
-
+    parentBlock.classList.add("skills__selected");
   });
 });
 
@@ -254,8 +246,10 @@ for (const card of document.querySelectorAll(".skills__block")) {
   card.onmousemove = (e) => lightOnMouseMove(e);
 }
 
-const heroContactBtn = document.querySelector(".contacts__send-form");
-heroContactBtn.addEventListener("click", function (e) {
+
+
+const contactBtn = document.querySelector(".contacts__send-form");
+contactBtn.addEventListener("click", function (e) {
   let size = Math.max(this.offsetWidth, this.offsetHeight),
     x = e.offsetX - size / 2,
     y = e.offsetY - size / 2,
