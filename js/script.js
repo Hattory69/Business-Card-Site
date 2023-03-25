@@ -102,14 +102,15 @@ function angle(cx, cy, ex, ey) {
   return deg;
 }
 
-const navLink = document.querySelectorAll(".header__link");
+const navLink = document.querySelectorAll(".nav-btn");
 const navItem = document.querySelectorAll(".item-js");
+const heroBtn = document.querySelector(".hero__btn");
 const borderAnim = document.querySelectorAll(".main__borders");
 const topBorder = document.querySelector(".main__wrapper :nth-child(1)");
 const rightBorder = document.querySelector(".main__wrapper :nth-child(2)");
 const bottomBorder = document.querySelector(".main__wrapper :nth-child(3)");
 const leftBorder = document.querySelector(".main__wrapper :nth-child(4)");
-const borderWidth = '50%';
+const borderWidth = "50%";
 
 borderAnim.forEach(function (border) {
   border.classList.add("active");
@@ -128,7 +129,7 @@ navLink.forEach(function (navBtn) {
     const path = e.currentTarget.dataset.path;
     document.querySelector(`[data-target="${path}"]`).classList.add("active");
 
-    if (path === 'Skills') {
+    if (path === "Skills") {
       topBorder.style.left = borderWidth;
       rightBorder.style.bottom = borderWidth;
       bottomBorder.style.right = borderWidth;
@@ -245,8 +246,6 @@ const lightOnMouseMove = (e) => {
 for (const card of document.querySelectorAll(".skills__block")) {
   card.onmousemove = (e) => lightOnMouseMove(e);
 }
-
-
 
 const contactBtn = document.querySelector(".contacts__send-form");
 contactBtn.addEventListener("click", function (e) {

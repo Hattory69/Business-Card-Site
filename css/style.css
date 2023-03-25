@@ -118,8 +118,10 @@ section {
 }
 
 .section-wrapper {
+  box-sizing: border-box;
   padding: 20px;
   height: 100%;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
 }
@@ -153,11 +155,31 @@ section {
 .header__logo {
   width: 100px;
   height: 40px;
-  background-image: url("../img/Logo.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  filter: drop-shadow(0px 0px 10px rgba(255, 0, 0, 0.99));
+  font-weight: 900;
+  line-height: 40px;
+  font-size: 30px;
+  animation: flicker 1.5s infinite alternate;
+  cursor: pointer;
+}
+
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff,
+      0 0 2rem var(--Granite), 0 0 4rem var(--Granite), 0 0 6rem var(--Granite),
+      0 0 8rem var(--Granite), 0 0 10rem var(--Granite);
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
 }
 
 .header__link {
@@ -329,92 +351,21 @@ section {
   color: var(--Black);
 }
 
-.hero__send-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 70px;
-  align-self: center;
-  position: relative;
-  overflow: hidden;
-  flex-direction: column;
-  background-color: var(--DarkPurplishBlue);
-  transform: translateX(200%);
-  transition-delay: 400ms;
-}
-
-.hero__send-form span {
-  position: absolute;
-  display: block;
+.hero__btn {
+  padding: 15px;
   transition: all 0.3s ease;
+  background-image: linear-gradient(
+    to right,
+    #000000,
+    #474b4f,
+    #8c1e1e
+  );
+  background-size: 300% 100%;
 }
 
-.hero__send-form span:nth-child(1) {
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background-color: var(--White);
-}
-
-.hero__send-form:hover span:nth-child(1) {
-  left: 0;
-}
-
-.hero__send-form span:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background-color: var(--White);
-  transition-delay: 400ms;
-}
-
-.hero__send-form:hover span:nth-child(2) {
-  top: 0;
-}
-
-.hero__send-form span:nth-child(3) {
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background-color: var(--White);
-}
-
-.hero__send-form:hover span:nth-child(3) {
-  right: 0;
-}
-
-.hero__send-form span:nth-child(4) {
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background-color: var(--White);
-  transition-delay: 400ms;
-}
-
-.hero__send-form:hover span:nth-child(4) {
-  bottom: 0;
-}
-
-.hero__send-form:focus,
-.hero__send-form:hover {
-  box-shadow: 0 0 5px #ff6f61, 0 0 10px #ff6f61, 0 0 20px #ff6f61;
-}
-
-.hero__send-form:focus {
-  background-color: var(--InternationalOrange);
-}
-
-.hero__send-form:hover {
-  background-color: var(--LuminousBrightOrange);
-}
-
-.hero__send-form:active {
-  background-color: var(--TheRedTree);
+.hero__btn:hover {
+  transform: scale(0.9);
+  background-position: 100% 0;
 }
 
 .hero__right {
@@ -436,7 +387,8 @@ section {
   align-self: center;
   box-shadow: 0px 2px 5px 7px var(--RubyRed);
   animation: dasharray 2s reverse;
-  text-shadow: 0 0 1px var(--Gainsborough), 0 0 3px var(--Gainsborough);
+  text-shadow: 0 0 1px var(--Gainsborough), 0 0 3px var(--Gainsborough),
+    0 0 5px var(--Gainsborough), 0 0 7px var(--Gainsborough);
 }
 
 @keyframes dasharray {
@@ -466,8 +418,8 @@ section {
 .skills__bottom {
   display: flex;
   height: 100%;
-width: 100%;
-justify-content: space-between;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .skills__skill-tree {
