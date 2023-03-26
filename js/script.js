@@ -110,7 +110,6 @@ const topBorder = document.querySelector(".main__wrapper :nth-child(1)");
 const rightBorder = document.querySelector(".main__wrapper :nth-child(2)");
 const bottomBorder = document.querySelector(".main__wrapper :nth-child(3)");
 const leftBorder = document.querySelector(".main__wrapper :nth-child(4)");
-const borderWidth = "50%";
 
 borderAnim.forEach(function (border) {
   border.classList.add("active");
@@ -129,11 +128,29 @@ navLink.forEach(function (navBtn) {
     const path = e.currentTarget.dataset.path;
     document.querySelector(`[data-target="${path}"]`).classList.add("active");
 
+    if (path === "AboutMe") {
+      topBorder.style.left = '';
+      rightBorder.style.bottom = '';
+      bottomBorder.style.right = '';
+      leftBorder.style.top = '';
+    }
     if (path === "Skills") {
-      topBorder.style.left = borderWidth;
-      rightBorder.style.bottom = borderWidth;
-      bottomBorder.style.right = borderWidth;
-      leftBorder.style.top = borderWidth;
+      topBorder.style.left = '25%';
+      rightBorder.style.bottom = '25%';
+      bottomBorder.style.right = '25%';
+      leftBorder.style.top = '25%';
+    }
+    if (path === "Portfolio") {
+      topBorder.style.left = '50%';
+      rightBorder.style.bottom = '50%';
+      bottomBorder.style.right = '50%';
+      leftBorder.style.top = '50%';
+    }
+    if (path === "Contacts") {
+      topBorder.style.left = '75%';
+      rightBorder.style.bottom = '75%';
+      bottomBorder.style.right = '75%';
+      leftBorder.style.top = '75%';
     }
   });
 });
@@ -177,6 +194,7 @@ startGame.addEventListener("click", function () {
   isGameActive = !isGameActive;
   if (isGameActive === true) {
     headDoodle.addEventListener("mouseover", dudleGame);
+  mouseHummer();
   } else {
     document.body.onmousemove = () => {
       headDoodle.removeEventListener("mouseover", dudleGame);
@@ -186,7 +204,6 @@ startGame.addEventListener("click", function () {
 });
 
 function dudleGame(event) {
-  mouseHummer();
   headDoodle.classList.add("hide");
   setTimeout(() => {
     headDoodle.style = `right: ${
