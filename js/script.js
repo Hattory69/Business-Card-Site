@@ -155,15 +155,12 @@ navLink.forEach(function (navBtn) {
   });
 });
 
-const skillsBtn = document.querySelectorAll(".skills__btn");
+const skillsBtn = document.querySelectorAll(".skills__button");
 const skillsItem = document.querySelectorAll(".skills__item");
 const skillsBlock = document.querySelectorAll(".skills__block");
 
 skillsBtn.forEach(function (skillsBtns) {
   skillsBtns.addEventListener("click", function (e) {
-    skillsBlock.forEach(function (element) {
-      element.classList.remove("skills__selected");
-    });
 
     skillsItem.forEach(function (element) {
       element.classList.remove("active", "skills__default");
@@ -171,9 +168,6 @@ skillsBtn.forEach(function (skillsBtns) {
 
     const path = e.currentTarget.dataset.path;
     document.querySelector(`[data-target="${path}"]`).classList.add("active");
-
-    const parentBlock = skillsBtns.parentNode;
-    parentBlock.classList.add("skills__selected");
   });
 });
 
@@ -260,7 +254,7 @@ const lightOnMouseMove = (e) => {
   target.style.setProperty("--mouse-y", `${y}px`);
 };
 
-for (const card of document.querySelectorAll(".skills__block")) {
+for (const card of document.querySelectorAll(".main__wrapper")) {
   card.onmousemove = (e) => lightOnMouseMove(e);
 }
 
