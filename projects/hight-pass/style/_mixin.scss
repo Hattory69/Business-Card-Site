@@ -1,0 +1,75 @@
+@import "./_variables.scss";
+
+@mixin list-reset {
+  padding-left: 0;
+  list-style: none;
+}
+
+@mixin btn {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+@mixin containerBlock {
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@mixin backgroundImage {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@mixin transition {
+  transition: all 0.3s ease;
+}
+
+@mixin hideElement {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin showElement {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin high-pass__teg {
+  color: $white;
+    background-color: $blackBrown;
+    position: absolute;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@mixin high-pass-btns {
+  color: $white;
+  border: 3px solid $orangeCrayola;
+  background-color: $orangeCrayola;
+  padding: 12px 20px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  &:hover {
+    background-color: $pearlyOrange;
+  }
+  &:focus {
+    border: 3px solid $titian;
+  }
+  &:active {
+    background-color: $titian;
+  }
+}

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="shortcut icon" href="./img/Logo.svg">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Mangcoding Store</title>
+</head>
+
+<body>
+  <header id="head" class="header">
+    <div class="header__wrapper container flex">
+      <div class="header__logo flex">
+        <img src="./img/Logo.svg" class="header__logo-img" alt="logo">
+        <p class="header__brand-name">mangcoding Store</p>
+        <button class="header__burger">
+          <span></span>
+        </button>
+      </div>
+      <nav class="header__nav flex">
+        <a href="#home" class="header__link">Home</a>
+        <a href="#course" class="header__link">Course</a>
+        <a href="#about-us" class="header__link">About Us</a>
+        <a href="#article" class="header__link">Article</a>
+        <a href="#contact" class="header__link">Contact</a>
+      </nav>
+      <div class="header__enter flex">
+        <button class="header__login">Log in</button>
+        <button class="header__register">Register</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div id="home" class="hero block">
+      <div class="hero__wrapper container flex">
+        <div class="hero__left">
+          <p class="hero__start">Lets <span class="hero__bold-start">Begins</span></p>
+          <h1 class="hero__title">
+            Let's Find The Right <span class="hero__title-span">Course</span> For you
+          </h1>
+          <p class="hero__descr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non convallis
+            molestie.
+          </p>
+          <div class="hero__btn flex">
+            <button class="hero__regist-btn">Register</button>
+            <button class="hero__play-btn flex"><span class="hero__play-img"></span>Play Video</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="about-us" class="what-we-give flex block">
+      <div class="what-we-give__wrapper flex container">
+        <div class="what-we-give__inner-block flex">
+          <div class="what-we-give__left">
+            <p class="what-we-give__top">WHAT WE GIVE</p>
+            <h2 class="what-we-give__title title">
+              What do You Get From Us
+            </h2>
+            <div class="what-we-give__descr">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non convallis
+              molestie.
+            </div>
+          </div>
+          <div class="swiper what-we-give__swiper">
+            <div class="what-we-give__swiper-content">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide what-we-give__slide">
+                  <div class="what-we-give__slide-inner">
+                    <span class="what-we-give__img teacher-img"></span>
+                    <h3 class="what-we-give__benefit-title">Professional Teacher</h3>
+                    <p class="what-we-give__benifit-descr">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non
+                      convallis molestie.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide what-we-give__slide flex">
+                  <div class="what-we-give__slide-inner">
+                    <span class="what-we-give__img hat-img"></span>
+                    <h3 class="what-we-give__benefit-title">Course Certificate</h3>
+                    <p class="what-we-give__benifit-descr">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non
+                      convallis molestie.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide what-we-give__slide flex">
+                  <div class="what-we-give__slide-inner">
+                    <span class="what-we-give__img medal-img"></span>
+                    <h3 class="what-we-give__benefit-title">interesting learning</h3>
+                    <p class="what-we-give__benifit-descr">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non
+                      convallis molestie.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide what-we-give__slide flex">
+                  <div class="what-we-give__slide-inner">
+                    <span class="what-we-give__img play-img"></span>
+                    <h3 class="what-we-give__benefit-title">120 Videos Course</h3>
+                    <p class="what-we-give__benifit-descr">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non
+                      convallis molestie.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-navigation flex">
+                <div class="swiper__navigation-wrapper flex">
+                  <div class="what-we-give__button-prev"></div>
+                  <div class="what-we-give__button-next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="article" class="selected-course">
+      <div class="selected-course__wrapper flex container">
+        <div class="selected-course__right">
+          <p class="selected-course__top">
+            SELECTED COURSE
+          </p>
+          <h2 class="selected-course__title title">
+            People Taking Courses
+          </h2>
+          <p class="selected-course__descr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non convallis
+            molestie.
+          </p>
+          <div class="selected-course__numbers flex">
+            <div class="selected-course__view">
+              <span class="selected-course__number">6,000</span>
+              <p class="selected-course__text">
+                People Views
+              </p>
+            </div>
+            <div class="selected-course__view">
+              <span class="selected-course__number">4,000</span>
+              <p class="selected-course__text">
+                User
+              </p>
+            </div>
+            <div class="selected-course__view">
+              <span class="selected-course__number">100</span>
+              <p class="selected-course__text">
+                Course
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="course" class="available-courses block">
+      <div class="available-courses__wrapper flex container">
+        <div class="available-courses__left swiper flex">
+          <div class="swiper-wrapper available-courses__swiper-wrapper">
+            <div class="available-courses__course swiper-slide flex">
+              <div class="available-courses__course-top">
+                <img class="available-courses__img" src="./img/htm-css__img.jpg" alt="htm-img">
+                <span class="available-courses__top-bage">
+                  Best Course
+                </span>
+                <span class="available-courses__top-fade"></span>
+                <span class="available-courses__course-price">
+                  $ 20 USD
+                </span>
+              </div>
+              <div class="available-courses__bottom flex">
+                <div class="available-courses__bottom-left">
+                  <h3 class="available-courses__course-title">
+                    HTML &#38; CSS
+                  </h3>
+                  <div class="available-courses__course-inner flex">
+                    <p class="available-courses__course-videos">
+                      120 Videos
+                    </p>
+                    <p class="available-courses__course-teachers">
+                      2 Teacher
+                    </p>
+                  </div>
+                </div>
+                <div class="available-courses__bottom-right">
+                  <span class="available-courses__views">
+                    1,500 Views
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="available-courses__course swiper-slide flex">
+              <div class="available-courses__course-top">
+                <img class="available-courses__img" src="./img/Photographer.jpg" alt="Photographer-img">
+                <span class="available-courses__top-bage">
+                  Best Course
+                </span>
+                <span class="available-courses__top-fade"></span>
+                <span class="available-courses__course-price">
+                  $ 20 USD
+                </span>
+              </div>
+              <div class="available-courses__bottom flex">
+                <div class="available-courses__bottom-left">
+                  <h3 class="available-courses__course-title">
+                    Photographer
+                  </h3>
+                  <div class="available-courses__course-inner flex">
+                    <p class="available-courses__course-videos">
+                      100 Videos
+                    </p>
+                    <p class="available-courses__course-teachers">
+                      2 Teacher
+                    </p>
+                  </div>
+                </div>
+                <div class="available-courses__bottom-right">
+                  <span class="available-courses__views">
+                    1,500 Views
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="available-courses__course swiper-slide flex">
+              <div class="available-courses__course-top">
+                <img class="available-courses__img" src="./img/JavaScript.jpg" alt="JavaScript-img">
+                <span class="available-courses__top-bage">
+                  Best Course
+                </span>
+                <span class="available-courses__top-fade"></span>
+                <span class="available-courses__course-price">
+                  $ 20 USD
+                </span>
+              </div>
+              <div class="available-courses__bottom flex">
+                <div class="available-courses__bottom-left">
+                  <h3 class="available-courses__course-title">
+                    JavaScript
+                  </h3>
+                  <div class="available-courses__course-inner flex">
+                    <p class="available-courses__course-videos">
+                      120 Videos
+                    </p>
+                    <p class="available-courses__course-teachers">
+                      2 Teacher
+                    </p>
+                  </div>
+                </div>
+                <div class="available-courses__bottom-right">
+                  <span class="available-courses__views">
+                    1,500 Views
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="available-courses__course swiper-slide flex">
+              <div class="available-courses__course-top ">
+                <img class="available-courses__img" src="./img/Desain-Grafis.jpg" alt="Desain Grafis">
+                <span class="available-courses__top-bage">
+                  Best Course
+                </span>
+                <span class="available-courses__top-fade"></span>
+                <span class="available-courses__course-price">
+                  $ 20 USD
+                </span>
+              </div>
+              <div class="available-courses__bottom flex">
+                <div class="available-courses__bottom-left">
+                  <h3 class="available-courses__course-title">
+                    Desain Grafis
+                  </h3>
+                  <div class="available-courses__course-inner flex">
+                    <p class="available-courses__course-videos">
+                      100 Videos
+                    </p>
+                    <p class="available-courses__course-teachers">
+                      2 Teacher
+                    </p>
+                  </div>
+                </div>
+                <div class="available-courses__bottom-right">
+                  <span class="available-courses__views">
+                    1,500 Views
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="available-courses__navigation flex">
+            <div class="available-courses__button-prev"></div>
+            <div class="available-courses__button-next"></div>
+          </div>
+        </div>
+        <div class="available-courses__right">
+          <p class="available-courses__top-right">
+            AVAILABLE FOR YOU
+          </p>
+          <h2 class="available-courses__title title">
+            Available Courses
+          </h2>
+          <p class="available-courses__descr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non convallis
+            molestie.
+          </p>
+          <button class="available-courses__btn">
+            See all
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials">
+      <div class="testimonials__wrapper flex">
+        <h2 class="testimonials__title">
+          Testimonials
+        </h2>
+        <ul class="testimonials__list flex">
+          <li class="testimonials__item">
+            <div class="testimonials__client flex">
+              <img src="./img/testimonials-Friskidia.png" class="testimonials__clients-img" alt="">
+              <div class="testimonials__clients-info flex">
+                <h3 class="testimonials__clients-name">
+                  Friskidia
+                </h3>
+                <p class="testimonials__clients-status">
+                  Client
+                </p>
+              </div>
+            </div>
+            <span class="testimonials__rating"></span>
+            <q class="testimonials__quote">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum dapibus luctus.
+            </q>
+          </li>
+          <li class="testimonials__item">
+            <div class="testimonials__client flex">
+              <img src="./img/testimonials-Finkidia.png" class="testimonials__clients-img" alt="">
+              <div class="testimonials__clients-info flex">
+                <h3 class="testimonials__clients-name">
+                  Finkidia
+                </h3>
+                <p class="testimonials__clients-status">
+                  Client
+                </p>
+              </div>
+            </div>
+            <span class="testimonials__rating"></span>
+            <q class="testimonials__quote">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum dapibus luctus.
+            </q>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer id="contact" class="footer">
+    <div class="footer__wrapper flex">
+      <div class="footer__left">
+        <div class="footer__logo flex">
+          <img src="./img/Logo.svg" alt="" class="footer__logo-img">
+          <p class="footer__brand-name">mangcoding Store</p>
+        </div>
+        <p class="footer__descr">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, justo nec porttitor auctor,
+          erat sapien faucibus lectus, vel tempor dolor augue et lectus.
+        </p>
+        <ul class="footer__social flex">
+          <li class="footer__social-item">
+            <a href="" class="footer__social-link fb-img"></a>
+          </li>
+          <li class="footer__social-item">
+            <a href="" class="footer__social-link twet-img"></a>
+          </li>
+          <li class="footer__social-item">
+            <a href="" class="footer__social-link linke-img"></a>
+          </li>
+          <li class="footer__social-item">
+            <a href="" class="footer__social-link inst-img"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__right flex">
+        <div class="footer__block footer__nav">
+          <h3 class="footer__block-title">
+            Home
+          </h3>
+          <ul class="footer__block-list">
+            <li class="footer__block-item">
+              <a href="#article" class="footer__block-link">
+                Product
+              </a>
+            </li>
+            <li class="footer__block-item">
+              <a href="#course" class="footer__block-link">
+                Course
+              </a>
+            </li>
+            <li class="footer__block-item">
+              <a href="#about-us" class="footer__block-link">
+                About Us
+              </a>
+            </li>
+            <li class="footer__block-item">
+              <a href="#head" class="footer__block-link">
+                Log in
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__block footer__courses">
+          <h3 class="footer__block-title">
+            Course
+          </h3>
+          <ul class="footer__block-list">
+            <li class="footer__block-item">
+              <a href="" class="footer__block-link">
+                HTMK &#38; CSS
+              </a>
+            </li>
+            <li class="footer__block-item">
+              <a href="" class="footer__block-link">
+                Javascript
+              </a>
+            </li>
+            <li class="footer__block-item">
+              <a href="" class="footer__block-link">
+                Fotographer
+              </a>
+            </li>
+            <li class="footer__block-item">
+              <a href="" class="footer__block-link">
+                Desain Grafis
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__block">
+          <h3 class="footer__block-title">
+            Article
+          </h3>
+          <ul class="footer__block-list">
+            <li class="footer__block-item">
+              <a href="" class="footer__block-link">
+                New
+              </a>
+            </li>
+            <li class="footer__block-item">
+              <a href="" class="footer__block-link">
+                Old
+              </a>
+            </li>
+            <li class="footer__block-item">
+              <a href="" class="footer__block-link">
+                Trend
+              </a>
+            </li>
+            <li class="footer__block-item">
+              <a href="" class="footer__block-link">
+                Popular
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__block">
+          <h3 class="footer__block-title">
+            Contact Us
+          </h3>
+          <ul class="footer__block-list">
+            <li class="footer__block-item">
+              <a href="" class="footer__block-link">
+                CCdoc123@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+   <div class="registration">
+    <div class="registration__window container">
+      <div class="registration__top flex">
+        <div class="registration__logo flex">
+          <img src="./img/Logo.svg" class="registration__logo-img" alt="logo">
+          <p class="registration__brand-name">mangcoding Store</p>
+        </div>
+        <div class="registration__swiper">
+          <div class="registration__pagination swiper-pagination flex"></div>
+          <h2 class="registration__title">Registration</h2>
+          <p class="registration__descr">Fill in the registration data. It will take a couple of minutes.
+            All you need is a phone number and e-mail</p>
+          <div class="registration__privacy flex">
+            <p class="registration__privacy-descr">
+              We take privacy issues seriously. You can be sure that your personal data is securely protected.
+            </p>
+            <button class="registration__close-privacy"></button>
+          </div>
+          <div class="registration__swiper-wrapper swiper-wrapper">
+            <div class="registration__swiper-slide swiper-slide">
+              <form action="#" class="registration__form">
+                <div class="registration__phone-wrapper">
+                  <p class="registration__input-info">Enter your phone number</p>
+                  <div class="registration__input-wrapper">
+                    <select class="registration__reg-code input-border" required name="country-code">
+                      <option disabled value="">Код</option>
+                      <option selected value="ru">+7</option>
+                      <option value="tu">+90</option>
+                      <option value="nj">+1</option>
+                    </select>
+                    <label class="registration__phone-lable">
+                      <input class="registration__phone-num input-border" placeholder="(999)-999-99-99" type="tel"
+                        name="tel" data-validate-field="tel" data-validate-rules="phone" required>
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="registration__next-button countdown">Confirm phone</button>
+              </form>
+            </div>
+            <div class="registration__swiper-slide swiper-slide">
+              <form action="#" class="registration__form">
+                <p class="registration__input-info">Enter password from the massage</p>
+                <div class="registration__input-wrapper registration__password">
+                  <div class="registration__password-wrapper flex">
+                    <input required class="registration__code-field input-border" placeholder="* * * *" type="password"
+                      minlength="4" maxlength="4" size="1">
+                    <button type="reset" class="registration__resending">Resend code <span
+                        class="registration__countdown">60sec</span></button>
+                  </div>
+                </div>
+                <button class="registration__next-button">Confirm phone</button>
+              </form>
+            </div>
+            <div class="registration__swiper-slide swiper-slide">
+              <form action="#" class="registration__form">
+                <div class="registration__user-info-wrapper">
+                  <p class="registration__input-info">Enter your email and password</p>
+                  <div class="registration__input-wrapper registration__user-data">
+                    <label class="registration__user-input">Enter your Email
+                      <input class="input-border user-input" type="email" name="email" required>
+                    </label>
+                    <div class="registration__input-password">Pick a password
+                      <input class="input-border registration__password-field password-field  user-input" type="password" minlength="8"
+                        maxlength="12" required>
+                      <button type="button" class="registration__eye password-eye"></button>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="registration__submit">Register an account</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <button class="popup-closeBtn">
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="log-in">
+    <div class="log-in__window container">
+      <div class="log-in__top flex">
+        <div class="log-in__logo flex">
+          <img src="./img/Logo.svg" class="log-in__logo-img" alt="logo">
+          <p class="log-in__brand-name">mangcoding Store</p>
+        </div>
+        <div class="log-in__wrapper">
+          <h2 class="log-in__title">Log in</h2>
+          <form action="#" class="log-in__form flex">
+            <div class="log-in__input-wrapper flex">
+              <label class="log-in__user-input">Enter your Email
+                <input class="input-border user-input" type="email" name="email" required>
+              </label>
+              <div class="log-in__input-password">Pick a password
+                <input class="input-border log-in__password-field password-field user-input" type="password" minlength="8"
+                  maxlength="12" required>
+                <button type="button" class="log-in__eye password-eye"></button>
+              </div>
+            </div>
+            <button type="submit" class="log-in__submit">Log in</button>
+          </form>
+        </div>
+        <button class="popup-closeBtn">
+        </button>
+      </div>
+    </div>
+  </div>
+  <a class="to-top" href="#head"></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./js/inputmask.min.js"></script>
+  <script src="./js/just-validate.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
