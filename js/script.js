@@ -10,7 +10,6 @@ const gsapProject = document.querySelectorAll(".fade");
 gsapProject.forEach((el) => observer.observe(el));
 
 const letters = "abcdefghijklmnopqrstuvwxyz";
-
 let interval = null;
 
 document.querySelector(".hero__sd-link").onmouseover = (event) => {
@@ -77,6 +76,19 @@ new window.JustValidate(".contacts__form-valid", {
   },
 });
 
+const capchaBlock = document.querySelector('.contacts__capcha');
+const formInputs = document.querySelectorAll('.forms-control');
+formInputs.forEach((formInput) => {
+  formInput.disabled = true;
+})
+
+function onRecaptchaSuccess () {
+  formInputs.forEach((formInput) => {
+    formInput.disabled = false;
+  })
+  capchaBlock.classList.add('checked');
+}
+
 document.addEventListener("mousemove", (e) => {
   const mouseX = e.clientX;
   const mouseY = e.clientY;
@@ -129,28 +141,28 @@ navLink.forEach(function (navBtn) {
     document.querySelector(`[data-target="${path}"]`).classList.add("active");
 
     if (path === "AboutMe") {
-      topBorder.style.left = '';
-      rightBorder.style.bottom = '';
-      bottomBorder.style.right = '';
-      leftBorder.style.top = '';
+      topBorder.style.left = "";
+      rightBorder.style.bottom = "";
+      bottomBorder.style.right = "";
+      leftBorder.style.top = "";
     }
     if (path === "Skills") {
-      topBorder.style.left = '25%';
-      rightBorder.style.bottom = '25%';
-      bottomBorder.style.right = '25%';
-      leftBorder.style.top = '25%';
+      topBorder.style.left = "25%";
+      rightBorder.style.bottom = "25%";
+      bottomBorder.style.right = "25%";
+      leftBorder.style.top = "25%";
     }
     if (path === "Portfolio") {
-      topBorder.style.left = '50%';
-      rightBorder.style.bottom = '50%';
-      bottomBorder.style.right = '50%';
-      leftBorder.style.top = '50%';
+      topBorder.style.left = "50%";
+      rightBorder.style.bottom = "50%";
+      bottomBorder.style.right = "50%";
+      leftBorder.style.top = "50%";
     }
     if (path === "Contacts") {
-      topBorder.style.left = '75%';
-      rightBorder.style.bottom = '75%';
-      bottomBorder.style.right = '75%';
-      leftBorder.style.top = '75%';
+      topBorder.style.left = "75%";
+      rightBorder.style.bottom = "75%";
+      bottomBorder.style.right = "75%";
+      leftBorder.style.top = "75%";
     }
   });
 });
@@ -161,7 +173,6 @@ const skillsBlock = document.querySelectorAll(".skills__block");
 
 skillsBtn.forEach(function (skillsBtns) {
   skillsBtns.addEventListener("click", function (e) {
-
     skillsItem.forEach(function (element) {
       element.classList.remove("active", "skills__default");
     });
@@ -188,7 +199,7 @@ startGame.addEventListener("click", function () {
   isGameActive = !isGameActive;
   if (isGameActive === true) {
     headDoodle.addEventListener("mouseover", dudleGame);
-  mouseHummer();
+    mouseHummer();
   } else {
     document.body.onmousemove = () => {
       headDoodle.removeEventListener("mouseover", dudleGame);
